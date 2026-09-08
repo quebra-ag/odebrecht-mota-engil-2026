@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duas vozes, os mesmos valores — Odebrecht E&C · Mota-Engil | Agência Quebra</title>
+  <meta name="description" content="Proposta de comunicação e marketing da Agência Quebra para a chegada da Mota-Engil como sócia da Odebrecht Engenharia & Construção.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+/* =====================================================================
+   Duas vozes, os mesmos valores — Odebrecht E&C · Mota-Engil
+   Agência Quebra · hotpage
+   ===================================================================== */
+
+/* ---------- Tokens ---------- */
+:root {
+  --bg: #0e110f;          /* verde-preto profundo (nunca #000) */
+  --bg-2: #151916;
+  --bg-3: #1c211d;
+  --line: rgba(241, 239, 232, 0.08);
+  --line-2: rgba(241, 239, 232, 0.16);
+
+  --ink: #f1efe8;         /* off-white quente */
+  --ink-2: #b9bdb3;
+  --ink-3: #7d827a;
+  --ink-4: #4f544e;
+
+  --lime: #b7e900;        /* verde limão Quebra */
+  --lime-2: #d6ff3d;
+  --lime-dim: rgba(183, 233, 0, 0.14);
+  --gold: #c9a227;
+
+  --light: #f1efe8;
+  --light-2: #e5e2d8;
+  --light-ink: #14170f;
+  --light-ink-2: #4a4f46;
+
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  --container: 1200px;
+  --narrow: 760px;
+  --gutter: clamp(20px, 4vw, 48px);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
+  --radius-s: 6px;
+  --radius-m: 12px;
+  --radius-l: 20px;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: -0.008em;
+  font-variation-settings: "opsz" 14;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; }
+h1, h2, h3, h4, p, ul, ol, blockquote, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+strong { font-weight: 640; }
+em { font-style: italic; }
+:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+.container--narrow { max-width: var(--narrow); }
+
+/* ---------- Placeholders (fase 1) ---------- */
+.ph {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  background:
+    repeating-linear-gradient(-45deg, rgba(183,233,0,0.06) 0 12px, transparent 12px 24px),
+    var(--bg-3);
+  border: 1px dashed rgba(183, 233, 0, 0.45);
+  color: var(--lime);
+  font-size: 13px;
+  text-align: center;
+  padding: 12px;
+  letter-spacing: 0.02em;
+}
+.ph--bg { position: absolute; inset: 0; min-height: 0; border: 0; }
+.ph--sq { aspect-ratio: 1; min-height: 0; }
+.ph--media { aspect-ratio: 4 / 3; min-height: 0; }
+.ph--book { aspect-ratio: 1; min-height: 0; }
+.ph--circle { border-radius: 50%; min-height: 0; }
+
+/* ---------- Topbar ---------- */
+.topbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--gutter);
+  background: rgba(14, 17, 15, 0.55);
+  border-bottom: 1px solid rgba(241,239,232,0.08);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+  color: var(--ink);
+}
+/* Marca: logo (2x) + separador + descrição do projeto na mesma linha — ref. quebra-ag.github.io/breakpoint */
+.topbar__brand { display: flex; align-items: center; gap: 18px; min-width: 0; }
+.topbar__logo { display: flex; align-items: center; flex: none; }
+.topbar__logo img { height: 60px; width: auto; transition: opacity 300ms var(--ease-out); }
+.topbar__logo:hover img { opacity: 0.75; }
+.topbar__sep { width: 1px; height: 38px; background: var(--line-2); flex: none; }
+.topbar__project {
+  font-size: 13px;
+  font-weight: 760;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.topbar__nav { display: flex; gap: 26px; }
+.topbar__nav a {
+  font-size: 13px;
+  font-weight: 560;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  opacity: 0.78;
+  transition: opacity 250ms var(--ease-out);
+}
+.topbar__nav a:hover { opacity: 1; }
+.topbar__toggle { display: none; width: 40px; height: 40px; border: 0; background: none; position: relative; }
+.topbar__toggle span { position: absolute; left: 10px; right: 10px; height: 2px; background: var(--ink); top: 50%; transition: transform 300ms var(--ease-inout); }
+.topbar__toggle span:first-child { transform: translateY(-5px); }
+.topbar__toggle span:last-child { transform: translateY(4px); }
+.topbar__toggle[aria-expanded="true"] span:first-child { transform: rotate(45deg); }
+.topbar__toggle[aria-expanded="true"] span:last-child { transform: rotate(-45deg); }
+@media (max-width: 1180px) {
+  .topbar__project { font-size: 12px; letter-spacing: 0.1em; }
+}
+@media (max-width: 900px) {
+  .topbar__toggle { display: block; }
+  .topbar__nav {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: rgba(14,17,15,0.92);
+    -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(241,239,232,0.08);
+    display: none;
+  }
+  .topbar__nav.is-open { display: flex; }
+  .topbar__nav a { padding: 16px var(--gutter); border-top: 1px solid rgba(241,239,232,0.06); font-size: 15px; }
+}
+@media (max-width: 640px) {
+  .topbar { padding: 10px var(--gutter); }
+  .topbar__brand { gap: 12px; }
+  .topbar__logo img { height: 44px; }
+  .topbar__sep { height: 28px; }
+  .topbar__project { font-size: 10px; letter-spacing: 0.12em; white-space: normal; max-width: 12ch; }
+}
+
+/* =====================================================================
+   1. HERO — sequência de frames + frases
+   ===================================================================== */
+.hero { position: relative; background: #e9eae7; }
+.hero__stage {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  color: var(--light-ink);
+}
+.hero__canvas, .hero__poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__poster { z-index: 0; }
+.hero__canvas { z-index: 1; }
+.hero.is-ready .hero__poster { opacity: 0; }
+.hero__vignette {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: rgba(14,17,15,0.34);
+  opacity: var(--hero-shade, 0);
+}
+
+.hero__title-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.hero__scrim {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background:
+    radial-gradient(70% 60% at 50% 50%, rgba(14,17,15,0.55), rgba(14,17,15,0.85) 100%);
+  opacity: 1;
+}
+.hero__title {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 780;
+  font-size: clamp(2.6rem, 8.5vw, 8.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  font-variation-settings: "opsz" 96;
+  color: var(--light);
+  text-shadow: 0 2px 40px rgba(14,17,15,0.5);
+  pointer-events: none;
+}
+/* Título de seção numerado do hero — mesmo peso/cor do título, acima do H1 */
+.hero__section {
+  position: absolute;
+  left: 50%; top: calc(50% - clamp(4.2rem, 9.5vw, 8.6rem));
+  z-index: 3;
+  transform: translateX(-50%);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 720;
+  letter-spacing: -0.02em;
+  color: var(--light);
+  text-shadow: 0 2px 30px rgba(14,17,15,0.6);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.hero__title span { display: block; }
+.hero__title span + span { font-weight: 300; letter-spacing: -0.02em; color: var(--lime); }
+
+.hero__hint {
+  position: absolute;
+  left: 50%; bottom: 28px; z-index: 3;
+  transform: translateX(-50%);
+  display: flex; align-items: center; gap: 12px;
+  font-size: 12px; letter-spacing: 0.08em; color: rgba(241,239,232,0.8);
+}
+.hero__hint-line { width: 1px; height: 46px; background: rgba(241,239,232,0.6); transform-origin: top; animation: hint 2.2s var(--ease-inout) infinite; }
+@keyframes hint { 0% { transform: scaleY(0); transform-origin: top } 50% { transform: scaleY(1); transform-origin: top } 51% { transform-origin: bottom } 100% { transform: scaleY(0); transform-origin: bottom } }
+
+.hero__quotes { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.hq {
+  position: absolute;
+  top: 50%;
+  width: min(44vw, 520px);
+  translate: 0 -50%;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+.hq--left  { left: clamp(20px, 7vw, 120px); text-align: left; }
+.hq--right { right: clamp(20px, 7vw, 120px); text-align: right; }
+.hq__in { position: relative; padding: 24px 8px; }
+.hq__in::before {
+  content: ""; position: absolute; inset: -30% -18%; z-index: -1; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(14,17,15,0.55), rgba(14,17,15,0) 100%);
+}
+.hq blockquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.6vw, 2.3rem);
+  line-height: 1.18;
+  letter-spacing: -0.005em;
+  color: var(--light);
+  text-shadow: 0 1px 2px rgba(14,17,15,0.6), 0 6px 30px rgba(14,17,15,0.5);
+}
+.hq blockquote::before { content: "“"; }
+.hq blockquote::after { content: "”"; }
+.hq cite {
+  display: block;
+  margin-top: 14px;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  text-shadow: 0 1px 2px rgba(14,17,15,0.7);
+}
+.hq--left cite::before, .hq--right cite::after {
+  content: ""; display: inline-block; width: 28px; height: 1px; background: currentColor; vertical-align: middle; margin: 0 10px;
+}
+/* Nas frases mais baixas o fundo escurece: texto passa a claro via variável */
+
+
+@media (max-width: 760px) {
+  .hq { width: min(84vw, 520px); left: 50% !important; right: auto !important; translate: -50% -50%; text-align: left; }
+  .hq--right { text-align: right; }
+}
+
+/* Movimento reduzido: sem sequência, frases empilhadas */
+@media (prefers-reduced-motion: reduce) {
+  .hero__stage { height: auto; min-height: 100svh; }
+  .hero__quotes { position: static; padding: 30vh var(--gutter) 10vh; display: grid; gap: 40px; }
+  .hq { position: static; opacity: 1; translate: none; width: min(100%, 560px); }
+  .hq--right { margin-left: auto; }
+  .hero__hint-line { animation: none; }
+}
+
+/* =====================================================================
+   1b. ENCONTRO — respiro claro
+   ===================================================================== */
+.theme-light { background: var(--light); color: var(--light-ink); }
+.encontro { padding: clamp(96px, 14vw, 180px) 0; text-align: center; }
+.encontro__logos {
+  display: flex; align-items: center; justify-content: center; gap: clamp(14px, 4vw, 64px);
+  flex-wrap: nowrap;
+  margin-bottom: clamp(56px, 8vw, 100px);
+}
+.encontro__logos img { height: auto; flex: 0 1 auto; }
+.encontro__logos img:first-child { width: clamp(150px, 38%, 360px); }
+.encontro__logos img:last-child  { width: clamp(104px, 26%, 250px); }
+.encontro__amp { font-family: var(--font-serif); font-style: italic; font-size: clamp(2rem, 4vw, 3.4rem); color: var(--light-ink-2); }
+.encontro__quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+  line-height: 1.38;
+  color: var(--light-ink);
+  max-width: 44ch;
+  margin-inline: auto;
+  text-wrap: pretty;
+}
+.encontro__quote::before { content: "“"; color: var(--gold); }
+.encontro__quote::after { content: "”"; color: var(--gold); }
+
+/* =====================================================================
+   2. LINHA DO TEMPO — horizontal, pinada
+   ===================================================================== */
+.timeline { position: relative; background: var(--bg); }
+.timeline__intro { padding: clamp(96px, 12vw, 170px) 0 clamp(64px, 8vw, 110px); }
+/* Header + subtítulo da linha do tempo, acima do primeiro ano (Ajuste 3) */
+.timeline__header {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--lime); font-weight: 600;
+  margin-bottom: 14px;
+}
+.timeline__header::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+.timeline__intro-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  line-height: 1.25;
+  color: var(--ink-2);
+  max-width: 34ch;
+  text-wrap: pretty;
+}
+.timeline__intro-text strong { color: var(--ink); }
+.timeline__head-title { font-size: 13px; letter-spacing: 0.08em; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.timeline__pin { position: relative; height: 100vh; height: 100svh; overflow: hidden; }
+.timeline__bgs { position: absolute; inset: 0; z-index: 0; }
+.timeline__bg { position: absolute; inset: 0; opacity: 0; transition: opacity 900ms var(--ease-inout); }
+.timeline__bg.is-active { opacity: 1; }
+.timeline__bg img { width: 100%; height: 100%; object-fit: cover; }
+.timeline__shade {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(14,17,15,0.55) 0%, rgba(14,17,15,0.25) 40%, rgba(14,17,15,0.85) 100%),
+    linear-gradient(90deg, rgba(14,17,15,0.6) 0%, rgba(14,17,15,0.1) 60%);
+}
+.timeline__head {
+  position: absolute; z-index: 3; top: 110px; left: var(--gutter); right: var(--gutter);
+  display: flex; justify-content: space-between; align-items: baseline; gap: 24px;
+}
+.timeline__counter { font-variant-numeric: tabular-nums; font-size: 13px; color: var(--ink-3); letter-spacing: 0.06em; }
+.timeline__counter-cur { color: var(--lime); }
+
+.timeline__track {
+  position: absolute; z-index: 2; inset: 0;
+  display: flex;
+  will-change: transform;
+}
+.timeline__rail {
+  position: absolute; left: 0; right: 0; top: 46%; height: 1px;
+  background: var(--line-2);
+}
+.timeline__rail-fill { height: 100%; width: 0; background: var(--lime); box-shadow: 0 0 12px var(--lime); }
+
+.tl-item {
+  position: relative;
+  flex: 0 0 100vw;
+  height: 100%;
+  padding: 0 var(--gutter);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding-top: calc(46vh + 44px);
+}
+.tl-item__node {
+  position: absolute; top: 46%; left: var(--gutter);
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--bg); border: 1px solid var(--ink-3);
+  transform: translate(0, -50%) scale(0.7);
+  transition: transform 500ms var(--ease-out), background 500ms, border-color 500ms, box-shadow 500ms;
+}
+.tl-item.is-active .tl-item__node { background: var(--lime); border-color: var(--lime); transform: translate(0,-50%) scale(1.25); box-shadow: 0 0 0 8px var(--lime-dim), 0 0 22px var(--lime); }
+.tl-item__year {
+  position: absolute; left: var(--gutter); bottom: calc(54% + 18px);
+  font-weight: 780;
+  font-size: clamp(4.4rem, 15vw, 15rem);
+  line-height: 0.85;
+  letter-spacing: -0.045em;
+  font-variation-settings: "opsz" 96;
+  color: var(--ink);
+  opacity: 0.18;
+  transform: translateY(20px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+}
+.tl-item.is-active .tl-item__year { opacity: 1; transform: none; }
+.tl-item__title {
+  max-width: 22ch;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 640;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  color: var(--lime-2);
+}
+.tl-item__text { max-width: 58ch; color: var(--ink-2); font-size: clamp(1rem, 1.25vw, 1.12rem); text-wrap: pretty; }
+.tl-item__text strong { color: var(--ink); }
+.tl-item__source { max-width: 60ch; margin-top: 18px; font-size: 11px; line-height: 1.5; color: var(--ink-3); font-style: italic; }
+
+/* Bloco de fontes independente, abaixo da linha do tempo */
+.timeline__sources { padding: clamp(28px, 4vw, 48px) 0 clamp(36px, 5vw, 64px); }
+.timeline__sources-text {
+  max-width: 78ch;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink-3);
+  font-style: italic;
+  text-wrap: pretty;
+}
+@media (max-width: 760px) { .timeline__sources-text { font-size: 11px; } }
+.tl-item__title, .tl-item__text, .tl-item__source { opacity: 0.35; transition: opacity 600ms var(--ease-out) 120ms; }
+.tl-item.is-active :is(.tl-item__title, .tl-item__text, .tl-item__source) { opacity: 1; }
+
+@media (max-width: 760px) {
+  .timeline__rail { top: 38%; }
+  .tl-item__node { top: 38%; }
+  .tl-item { padding-top: calc(38vh + 30px); }
+  .tl-item__year { bottom: calc(62% + 14px); font-size: clamp(4rem, 22vw, 7rem); }
+  .timeline__head { top: 84px; }
+  .tl-item__source { display: none; }
+  .tl-item__title { font-size: 1.2rem; margin-bottom: 10px; }
+  .tl-item__text { font-size: 0.92rem; line-height: 1.45; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .timeline__pin { height: auto; overflow: visible; }
+  .timeline__track { position: static; flex-direction: column; }
+  .timeline__bgs, .timeline__rail { display: none; }
+  .timeline__head { position: static; padding: 100px var(--gutter) 40px; }
+  .tl-item { flex-basis: auto; height: auto; padding: 40px var(--gutter); }
+  .tl-item__year { position: static; font-size: 4rem; opacity: 1; transform: none; }
+  .tl-item :is(.tl-item__title, .tl-item__text, .tl-item__source) { opacity: 1; }
+  .tl-item__node { display: none; }
+}
+
+/* =====================================================================
+   3. NOSSA VISÃO
+   ===================================================================== */
+.visao { padding: clamp(96px, 12vw, 170px) 0 clamp(80px, 10vw, 140px); }
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  font-weight: 720;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  font-variation-settings: "opsz" 96;
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+.prose p + p { margin-top: 1.25em; }
+.prose { color: var(--ink-2); text-wrap: pretty; }
+.prose--lead { font-size: clamp(1.1rem, 1.5vw, 1.3rem); }
+.prose--small { font-size: 0.95rem; }
+.prose strong { color: var(--ink); }
+.hl { color: var(--lime); font-weight: 640; }
+
+.sociedade {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  margin: clamp(64px, 9vw, 130px) 0;
+  min-height: 520px;
+}
+.sociedade__text {
+  background: var(--lime);
+  color: var(--light-ink);
+  padding: clamp(36px, 5vw, 72px);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.sociedade__intro { font-size: 1rem; font-weight: 560; letter-spacing: 0.01em; opacity: 0.75; margin-bottom: 18px; }
+.sociedade__big {
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+  font-weight: 720;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  font-variation-settings: "opsz" 96;
+  text-wrap: balance;
+}
+.sociedade__rest { margin-top: 28px; font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.5; max-width: 48ch; }
+.sociedade__visual { display: grid; place-items: center; padding: 40px; }
+.venn { position: relative; width: min(100%, 460px); aspect-ratio: 1.55; }
+.venn__circle {
+  position: absolute; top: 50%; width: 62%; aspect-ratio: 1;
+  border-radius: 50%; transform: translateY(-50%);
+  display: grid; place-items: end center; padding-bottom: 15%;
+  font-size: 11px; letter-spacing: 0.05em; font-weight: 560;
+  mix-blend-mode: screen;
+}
+/* Rótulos: nome completo em duas linhas, mesmo tratamento nos dois círculos (Ajuste 4) */
+.venn__circle span {
+  display: block; text-align: center; line-height: 1.3;
+  max-width: 60%; text-wrap: balance;
+}
+/* Rótulos deslocados para o lado externo de cada círculo, fora da interseção — espelhados */
+.venn__circle--odb span  { translate: -22% 0; }
+.venn__circle--mota span { translate: 22% 0; }
+.venn__circle--odb { left: 0; border: 1px solid rgba(241,239,232,0.5); background: radial-gradient(circle at 35% 35%, rgba(241,239,232,0.10), transparent 70%); color: var(--ink); }
+.venn__circle--mota { right: 0; border: 1px solid var(--lime); background: radial-gradient(circle at 65% 35%, var(--lime-dim), transparent 70%); color: var(--lime); }
+@media (max-width: 860px) {
+  .sociedade { grid-template-columns: 1fr; }
+  .sociedade__visual { padding: 40px 0; }
+}
+
+.resultado {
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-variation-settings: "opsz" 96;
+  margin-bottom: clamp(48px, 6vw, 80px);
+  text-wrap: balance;
+}
+.resultado strong { font-weight: 660; color: var(--ink); }
+
+.frentes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: clamp(48px, 6vw, 80px);
+  counter-reset: none;
+}
+.frente a {
+  display: grid; gap: 14px; align-content: start;
+  height: 100%;
+  padding: 28px 26px 30px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
+  text-decoration: none;
+  background: linear-gradient(180deg, var(--bg-2), transparent);
+  transition: border-color 300ms var(--ease-out), transform 400ms var(--ease-out);
+}
+.frente a:hover { border-color: var(--lime); transform: translateY(-3px); }
+.frente__num {
+  font-size: clamp(3rem, 5vw, 4.4rem); font-weight: 780; line-height: 0.85; letter-spacing: -0.04em;
+  color: var(--lime); font-variation-settings: "opsz" 96;
+}
+.frente__kind { font-size: 13px; letter-spacing: 0.04em; color: var(--ink-3); font-weight: 560; margin-top: 10px; }
+.frente__name { font-size: clamp(1.15rem, 1.6vw, 1.4rem); font-weight: 640; letter-spacing: -0.02em; line-height: 1.15; }
+@media (max-width: 760px) { .frentes { grid-template-columns: 1fr; } }
+
+/* =====================================================================
+   4. PRODUTOS
+   ===================================================================== */
+/* Cabeçalho numerado do bloco de produtos (Ajuste 2) */
+.produtos__head { padding-top: clamp(96px, 12vw, 170px); }
+.produtos__head .section-title { margin-bottom: clamp(48px, 7vw, 96px); }
+.produto { padding: clamp(96px, 12vw, 180px) 0 clamp(40px, 6vw, 80px); border-top: 1px solid var(--line); }
+.produto > .container, .produto > .container--narrow { margin-top: clamp(56px, 7vw, 96px); }
+.produto > .produto__head { margin-top: 0; }
+.produto__kind { display: flex; align-items: center; gap: 14px; font-size: 14px; letter-spacing: 0.04em; color: var(--ink-3); font-weight: 560; }
+.produto__num {
+  display: inline-grid; place-items: center;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--lime); color: var(--light-ink);
+  font-weight: 760; font-size: 15px; letter-spacing: 0;
+}
+.produto__title {
+  margin-top: 22px;
+  font-size: clamp(2.6rem, 7vw, 6.6rem);
+  font-weight: 760;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-variation-settings: "opsz" 96;
+  max-width: 14ch;
+}
+.produto__sub {
+  margin-top: 26px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: 1.3;
+  color: var(--ink-2);
+  max-width: 44ch;
+}
+
+/* ---- Timeline vertical alternada ---- */
+.vtl { position: relative; padding: 10px 0; }
+.vtl::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px;
+  background: linear-gradient(180deg, transparent, var(--line-2) 8%, var(--line-2) 92%, transparent);
+}
+.vtl__item { position: relative; display: grid; grid-template-columns: 1fr 1fr; }
+.vtl__item + .vtl__item { margin-top: 48px; }
+.vtl__item::before {
+  content: ""; position: absolute; left: 50%; top: 34px; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--lime); transform: translateX(-50%); box-shadow: 0 0 0 6px var(--lime-dim);
+}
+.vtl__card {
+  grid-column: 1;
+  padding: 26px 28px 30px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  margin-right: 40px;
+}
+.vtl__item:nth-child(even) .vtl__card { grid-column: 2; margin-right: 0; margin-left: 40px; }
+.vtl__title { font-size: clamp(1.25rem, 1.8vw, 1.55rem); font-weight: 680; letter-spacing: -0.02em; line-height: 1.12; }
+.vtl__keys { margin-top: 10px; font-size: 12.5px; letter-spacing: 0.03em; color: var(--lime); font-weight: 560; }
+.vtl__body { margin-top: 18px; font-size: 1rem; color: var(--ink-2); }
+.vtl__body strong { color: var(--ink); }
+.vtl__label { font-family: var(--font-serif); font-size: clamp(1.4rem, 2vw, 1.8rem); line-height: 1.15; color: var(--ink); }
+.vtl__source { margin-top: 18px; font-size: 12.5px; line-height: 1.5; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 12px; }
+.vtl__source a { color: var(--ink-2); text-decoration-color: var(--ink-4); }
+@media (max-width: 760px) {
+  .vtl::before { left: 8px; }
+  .vtl__item { grid-template-columns: 1fr; }
+  .vtl__item::before { left: 8px; }
+  .vtl__card, .vtl__item:nth-child(even) .vtl__card { grid-column: 1; margin: 0 0 0 30px; }
+}
+
+/* ---- Botão trilha ---- */
+.trilha { display: grid; justify-items: center; gap: clamp(40px, 5vw, 64px); }
+.play {
+  --p: 0;
+  position: relative;
+  display: inline-flex; align-items: center; gap: 16px;
+  padding: 14px 26px 14px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(183,233,0,0.5);
+  background: var(--bg-2);
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 300ms var(--ease-out), border-color 300ms;
+}
+.play:hover { transform: translateY(-2px); border-color: var(--lime); }
+.play__glow {
+  position: absolute; inset: -40%; z-index: -1;
+  background: conic-gradient(from 0deg, transparent 0 65%, rgba(183,233,0,0.55) 82%, transparent 100%);
+  animation: spin 3.4s linear infinite;
+  opacity: 0.9;
+}
+.play::after {  /* máscara interna para a borda girar como "brilho" */
+  content: ""; position: absolute; inset: 1px; border-radius: inherit; background: var(--bg-2); z-index: -1;
+}
+.play::before { /* barra de progresso do áudio */
+  content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: calc(var(--p) * 100%);
+  background: var(--lime); z-index: 1; transition: width 300ms linear;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.play__icon {
+  position: relative; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--lime); color: var(--light-ink);
+  box-shadow: 0 0 0 0 rgba(183,233,0,0.6);
+  animation: pulse 2.6s var(--ease-out) infinite;
+}
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(183,233,0,0.55) } 70% { box-shadow: 0 0 0 16px rgba(183,233,0,0) } 100% { box-shadow: 0 0 0 0 rgba(183,233,0,0) } }
+.play__tri { margin-left: 3px; }
+.play__bars { display: none; gap: 3px; align-items: flex-end; height: 18px; }
+.play__bars i { width: 3px; background: var(--light-ink); border-radius: 2px; animation: eq 900ms ease-in-out infinite; }
+.play__bars i:nth-child(1) { height: 60%; animation-delay: 0ms; }
+.play__bars i:nth-child(2) { height: 100%; animation-delay: 120ms; }
+.play__bars i:nth-child(3) { height: 45%; animation-delay: 260ms; }
+.play__bars i:nth-child(4) { height: 80%; animation-delay: 380ms; }
+@keyframes eq { 0%, 100% { transform: scaleY(0.4) } 50% { transform: scaleY(1) } }
+.play.is-playing .play__tri { display: none; }
+.play.is-playing .play__bars { display: flex; }
+.play.is-playing .play__icon { animation: none; }
+.play__time { font-variant-numeric: tabular-nums; font-size: 13px; color: var(--ink-3); }
+
+.lyrics {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.lyrics p + p { margin-top: 1.4em; }
+.lyrics__title { font-style: normal; font-family: var(--font-display); font-size: 13px; letter-spacing: 0.05em; color: var(--ink-3); font-weight: 560; }
+.lyrics__title span { color: var(--ink-4); }
+.lyrics__voice { color: var(--lime); }
+.lyrics__voice strong { font-family: var(--font-display); font-style: normal; font-size: 12px; letter-spacing: 0.08em; display: block; margin-bottom: 8px; color: var(--ink-3); }
+.lyrics__sign { font-family: var(--font-display); font-style: normal; font-size: 0.95rem; color: var(--ink-3); }
+.lyrics__sign strong { color: var(--ink-2); }
+
+/* ---- Mosaico ---- */
+.mosaico {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+.mosaico li { aspect-ratio: 1; overflow: hidden; }
+.mosaico img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- Grid de 3 cards ---- */
+.grid3__intro { max-width: 60ch; color: var(--ink-2); font-size: clamp(1.05rem, 1.4vw, 1.25rem); margin-bottom: clamp(40px, 5vw, 64px); }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card {
+  padding: 28px 26px 32px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
+  background: var(--bg-2);
+}
+.card h3 { font-size: 1.3rem; font-weight: 680; letter-spacing: -0.02em; margin-bottom: 14px; }
+.card p { color: var(--ink-2); font-size: 1rem; }
+.card strong { color: var(--lime); }
+@media (max-width: 860px) { .grid3 { grid-template-columns: 1fr; } }
+
+/* ---- Lista de status ---- */
+.status {
+  max-width: 640px;
+  padding: 28px 28px 24px;
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-m);
+}
+.status__label { font-size: 13px; letter-spacing: 0.05em; color: var(--ink-3); font-weight: 560; margin-bottom: 14px; }
+.status__list li {
+  display: grid; grid-template-columns: 22px 1fr; gap: 14px; align-items: start;
+  padding: 10px 12px; border-radius: var(--radius-s);
+  color: var(--ink-3); font-size: 0.98rem; line-height: 1.4;
+}
+.status__box { width: 20px; height: 20px; margin-top: 1px; border-radius: 5px; border: 1.5px solid var(--ink-4); position: relative; }
+.status__list li.is-on { background: var(--lime-dim); color: var(--ink); font-weight: 600; }
+.status__list li.is-on .status__box { background: var(--lime); border-color: var(--lime); }
+.status__list li.is-on .status__box::after {
+  content: ""; position: absolute; left: 6px; top: 2px; width: 5px; height: 10px;
+  border: solid var(--light-ink); border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+
+/* ---- Accordion ---- */
+.entregas { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 40px; }
+.entregas__title {
+  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 720; letter-spacing: -0.035em; line-height: 0.95;
+  font-variation-settings: "opsz" 96;
+}
+.acc { display: grid; gap: 10px; }
+.acc__item { border: 1px solid var(--line-2); border-radius: var(--radius-m); background: var(--bg-2); overflow: hidden; transition: border-color 300ms; }
+.acc__item:has(.acc__btn[aria-expanded="true"]) { border-color: rgba(183,233,0,0.5); }
+.acc__btn {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 20px 22px; background: none; border: 0; text-align: left;
+  font-size: 1.15rem; font-weight: 640; letter-spacing: -0.015em;
+}
+.acc__icon { position: relative; width: 22px; height: 22px; flex: none; }
+.acc__icon::before, .acc__icon::after {
+  content: ""; position: absolute; background: var(--lime); border-radius: 2px;
+  top: 50%; left: 50%; transition: transform 400ms var(--ease-inout);
+}
+.acc__icon::before { width: 14px; height: 2px; transform: translate(-50%, -50%); }
+.acc__icon::after { width: 2px; height: 14px; transform: translate(-50%, -50%); }
+.acc__btn[aria-expanded="true"] .acc__icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+.acc__btn[aria-expanded="true"] .acc__icon::before { transform: translate(-50%, -50%) rotate(180deg); }
+.acc__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 450ms var(--ease-inout); }
+.acc__btn[aria-expanded="true"] + .acc__panel { grid-template-rows: 1fr; }
+.acc__inner { overflow: hidden; }
+.acc__inner p { padding: 0 22px 22px; color: var(--ink-2); font-size: 1rem; }
+@media (max-width: 760px) { .entregas { grid-template-columns: 1fr; gap: 24px; } }
+
+/* ---- Bloco de mídia com cards laterais ---- */
+.media-block { position: relative; padding: 0 clamp(0px, 6vw, 90px); }
+.media-block__media { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; border-radius: var(--radius-m); overflow: hidden; }
+.media-block__img img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
+.media-block__card {
+  position: absolute; top: 18%; width: 300px;
+  padding: 24px 24px 26px;
+  background: var(--light); color: var(--light-ink);
+  border-radius: var(--radius-m);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+.media-block__card--left { left: 0; }
+.media-block__card--right { right: 0; }
+.media-block__card h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
+.media-block__card p { font-size: 0.92rem; line-height: 1.45; color: var(--light-ink-2); }
+@media (max-width: 900px) {
+  .media-block { padding: 0; }
+  .media-block__media { grid-template-columns: 1fr; }
+  .media-block__card { position: static; width: auto; margin-top: 14px; }
+}
+
+/* ---- Frases-conceito ---- */
+.imagine { padding: clamp(24px, 4vw, 48px) 0; }
+.imagine__label { font-size: 13px; letter-spacing: 0.05em; color: var(--ink-3); font-weight: 560; margin-bottom: 26px; }
+.imagine p:not(.imagine__label) {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+  line-height: 1.15; letter-spacing: -0.01em;
+}
+.imagine p:not(.imagine__label) + p { margin-top: 0.7em; }
+
+/* ---- Referências de imersão ---- */
+.refs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.refs__item { overflow: hidden; border-radius: var(--radius-m); }
+.refs__item img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
+.refs__caption { grid-column: 1 / -1; margin-top: 10px; font-size: 12.5px; color: var(--ink-3); letter-spacing: 0.04em; }
+@media (max-width: 640px) { .refs { grid-template-columns: 1fr; } }
+
+/* ---- Capa provisória do livro ---- */
+.capa-mock {
+  aspect-ratio: 1; width: 100%;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 8%;
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(183,233,0,0.22), transparent 55%),
+    linear-gradient(160deg, #23291f, #0e110f 70%);
+  border: 1px solid rgba(241,239,232,0.12);
+  color: var(--ink);
+}
+.capa-mock__kicker { font-size: 12px; letter-spacing: 0.08em; color: var(--ink-3); }
+.capa-mock__title { font-size: clamp(2rem, 6vw, 4rem); font-weight: 760; line-height: 0.9; letter-spacing: -0.04em; font-variation-settings: "opsz" 96; }
+.capa-mock__foot { font-size: 12px; color: var(--ink-3); }
+.capa-mock--circle { border-radius: 50%; justify-content: center; align-items: center; padding: 0; }
+.capa-mock--circle .capa-mock__title { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+
+/* ---- Callout de nota ---- */
+.note {
+  margin-top: 48px;
+  padding: 26px 28px;
+  background: var(--bg-2);
+  border-left: 3px solid var(--gold);
+}
+.note p { color: var(--ink-2); font-size: 1rem; }
+.note strong { color: var(--gold); }
+
+/* ---- Livro: imagens de Norberto Odebrecht (Ajuste 5) ---- */
+.norberto {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+  width: min(100%, 900px);
+  margin-inline: auto;
+}
+.norberto figure { position: relative; overflow: hidden; border-radius: var(--radius-s); background: var(--bg-2); }
+.norberto__main { grid-row: 1 / 3; aspect-ratio: 4 / 3; }
+.norberto__side { aspect-ratio: 4 / 3; }
+.norberto img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.norberto__main img { object-position: center; filter: contrast(1.02); }
+.norberto__main figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 36px 18px 14px;
+  font-size: 12.5px; line-height: 1.4; color: rgba(241,239,232,0.85);
+  background: linear-gradient(180deg, transparent, rgba(14,17,15,0.85));
+}
+.norberto__credit { color: var(--ink-3); font-style: italic; }
+@media (max-width: 640px) {
+  .norberto { grid-template-columns: 1fr 1fr; }
+  .norberto__main { grid-column: 1 / -1; grid-row: 1; }
+  .norberto__main figcaption { font-size: 11.5px; padding: 28px 12px 10px; }
+}
+
+/* ---- Livro: capa ---- */
+.livro__capa { width: min(100%, 420px); margin-inline: auto; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+
+/* ---- Diagrama radial com legendas laterais ---- */
+.radial {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px) minmax(0, 1fr);
+  gap: 0;
+  align-items: center;
+}
+.radial__left { display: grid; gap: clamp(36px, 5vw, 64px); padding-right: 8px; position: relative; z-index: 1; }
+/* Bloco: número → tag → subtítulo, mesma estrutura vertical nos três (Ajuste 6) */
+.radial__block { display: grid; justify-items: start; gap: 10px; position: relative; }
+/* Linhas desenhadas em SVG pelo JS: cada uma liga o número (01, 02, 03) ao núcleo */
+.radial__lines {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  z-index: 0; pointer-events: none; overflow: visible;
+}
+.radial__lines path { fill: none; stroke: var(--lime); stroke-width: 1; opacity: 0.75; }
+.radial__lines circle { fill: var(--lime); }
+.radial__lines circle.is-glow { fill: none; stroke: var(--lime); stroke-width: 1; opacity: 0.35; }
+.radial__num {
+  font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; letter-spacing: -0.03em; line-height: 1; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.radial__tag {
+  display: inline-block; padding: 5px 10px; border-radius: 6px;
+  background: var(--light); color: var(--light-ink); font-size: 12px; font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+.radial__desc { font-size: 0.92rem; color: var(--ink-2); max-width: 26ch; }
+.radial__center { position: relative; aspect-ratio: 1; display: grid; place-items: center; }
+.radial__ring { position: absolute; inset: 6%; border-radius: 50%; border: 1px dashed rgba(183,233,0,0.45); }
+.radial__halo { position: absolute; inset: 14%; border-radius: 50%; background: radial-gradient(circle, rgba(183,233,0,0.35), transparent 70%); filter: blur(14px); }
+.radial__circle { position: relative; width: 66%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; z-index: 1; box-shadow: 0 0 0 1px rgba(241,239,232,0.15); }
+.radial__circle img { width: 100%; height: 100%; object-fit: cover; }
+.radial__right { display: grid; gap: 16px; justify-items: start; padding-left: 8px; }
+.pill {
+  position: relative; display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 16px; border-radius: 14px;
+  background: linear-gradient(135deg, #fbfaf6, #e6e4da);
+  color: var(--light-ink);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  min-width: 190px;
+  z-index: 2;
+}
+.pill:nth-child(1) { transform: translateX(-28px); }
+.pill:nth-child(2) { transform: translateX(6px); }
+.pill:nth-child(3) { transform: translateX(-14px); }
+.pill span { font-weight: 720; font-size: 1.05rem; letter-spacing: -0.01em; line-height: 1.15; }
+.pill small { display: block; font-weight: 500; font-size: 12px; color: var(--light-ink-2); margin-top: 3px; }
+.pill i { width: 14px; height: 14px; border-radius: 50%; background: var(--lime); flex: none; margin-top: 2px; margin-left: auto; }
+@media (max-width: 900px) {
+  .radial { grid-template-columns: 1fr; gap: 32px; }
+  .radial__lines { display: none; }
+  .radial__center { width: min(100%, 320px); margin-inline: auto; }
+  .radial__right { justify-items: stretch; }
+  .pill { transform: none !important; }
+}
+
+/* ---- Grid de boxes de tópicos ---- */
+.topics__title { font-size: clamp(1.3rem, 2.2vw, 1.8rem); font-weight: 680; letter-spacing: -0.02em; line-height: 1.15; max-width: 34ch; margin-bottom: 32px; }
+/* Quadrante fechado 2 × 2, altura igual por linha (Ajuste 7) */
+.topics__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 16px; max-width: 960px; }
+.topic {
+  padding: 24px 26px 28px;
+  border: 1px solid rgba(183,233,0,0.55);
+  border-radius: var(--radius-s);
+  color: var(--ink-2); font-size: 1.02rem; line-height: 1.5;
+  text-wrap: pretty;
+}
+@media (max-width: 640px) { .topics__grid { grid-template-columns: 1fr; grid-auto-rows: auto; } }
+
+/* ---- Hub and spoke ---- */
+.hub { padding: clamp(40px, 6vw, 80px) 0 clamp(20px, 3vw, 40px); }
+.hub__label { text-align: center; font-size: 13px; letter-spacing: 0.05em; color: var(--ink-3); font-weight: 560; margin-bottom: 80px; }
+.hub__stage { position: relative; width: min(100%, 500px); aspect-ratio: 1; margin-inline: auto; margin-bottom: 24px; }
+.hub__mesh { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: rgba(241,239,232,0.10); stroke-width: 1; }
+.hub__mesh circle { stroke-dasharray: 3 6; }
+.hub__core {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 34%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #f6f8ea, #dfe9a8 70%, #c9dd66 100%);
+  box-shadow: 0 0 60px rgba(183,233,0,0.35), 0 20px 50px rgba(0,0,0,0.4);
+  display: grid; place-items: center;
+  color: #5a7200; font-weight: 760; font-size: clamp(1rem, 2vw, 1.3rem); letter-spacing: -0.01em;
+}
+/* Satélites: título + subtítulo dentro do gráfico (Ajuste 8) */
+.hub__sat { position: absolute; width: max-content; max-width: 15ch; line-height: 1.15; color: var(--ink); }
+.hub__sat strong { display: block; font-size: clamp(0.92rem, 1.5vw, 1.02rem); font-weight: 660; letter-spacing: -0.01em; }
+.hub__sat span { display: block; margin-top: 5px; font-size: 12.5px; line-height: 1.35; font-weight: 480; color: var(--ink-2); text-wrap: pretty; }
+.hub__sat--1 { left: 50%; top: 8.3%; transform: translate(-50%, calc(-100% - 12px)); text-align: center; max-width: 22ch; }
+.hub__sat--2 { left: calc(89.6% + 12px); top: 37.1%; transform: translate(0, -50%); text-align: left; }
+.hub__sat--3 { left: calc(74.5% + 10px); top: 83.7%; transform: translate(0, -30%); text-align: left; }
+.hub__sat--4 { left: calc(25.5% - 10px); top: 83.7%; transform: translate(-100%, -30%); text-align: right; }
+.hub__sat--5 { left: calc(10.4% - 12px); top: 37.1%; transform: translate(-100%, -50%); text-align: right; }
+.hub__detail { margin-top: 32px; }
+.hub__detail strong { color: var(--ink); }
+@media (max-width: 760px) {
+  .hub__stage { width: min(100%, 420px); }
+  .hub__sat { max-width: 12ch; }
+  .hub__sat strong { font-size: 0.85rem; }
+  .hub__sat span { font-size: 11px; margin-top: 3px; }
+  .hub__sat--1 { max-width: 20ch; }
+}
+@media (max-width: 560px) {
+  /* Telas estreitas: núcleo em cima, satélites em grade 2 colunas abaixo (sem colisão nem corte) */
+  .hub__label { margin-bottom: 24px; }
+  .hub__stage {
+    width: 100%; aspect-ratio: auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    padding-top: 230px;
+  }
+  .hub__mesh { height: 210px; inset: 0 0 auto 0; }
+  .hub__core { top: 105px; width: 120px; }
+  .hub__sat, .hub__sat--1, .hub__sat--2, .hub__sat--3, .hub__sat--4, .hub__sat--5 {
+    position: static; transform: none; width: auto; max-width: none; text-align: left;
+    padding: 12px 14px; border: 1px solid var(--line-2); border-radius: var(--radius-s); background: var(--bg-2);
+  }
+  .hub__sat--1 { grid-column: 1 / -1; }
+  .hub__sat strong { font-size: 0.92rem; }
+  .hub__sat span { font-size: 12px; }
+}
+
+/* ---- Gantt ---- */
+.gantt__title { font-size: 1.3rem; font-weight: 680; letter-spacing: -0.02em; margin-bottom: 24px; }
+.gantt__title span { font-weight: 500; color: var(--ink-3); font-size: 0.9rem; margin-left: 10px; }
+.gantt__row { display: grid; gap: 10px; }
+.gantt__row + .gantt__row { margin-top: 22px; }
+.gantt__bar {
+  width: 50%; height: 44px; border-radius: 8px;
+  display: flex; align-items: center; padding: 0 16px;
+  font-weight: 640; font-size: 0.95rem;
+}
+.gantt__bar--1 { background: var(--lime); color: var(--light-ink); }
+.gantt__bar--2 { background: var(--bg-3); border: 1px solid rgba(183,233,0,0.5); color: var(--lime); margin-left: 50%; }
+.gantt__sub { font-size: 0.9rem; color: var(--ink-3); }
+.gantt__row--2 .gantt__sub { margin-left: 50%; }
+@media (max-width: 640px) { .gantt__row--2 .gantt__sub { margin-left: 0; } }
+
+/* ---- Referência discreta: livro Instituto Ayrton Senna 30 anos (Ajuste 9) ---- */
+.ref-book {
+  display: flex; align-items: center; gap: 22px;
+  max-width: 560px; margin-inline: auto;
+  padding-top: 28px; border-top: 1px solid var(--line);
+  opacity: 0.82;
+}
+.ref-book img { width: 132px; flex: none; border-radius: 4px; filter: saturate(0.7); }
+.ref-book figcaption { font-size: 12.5px; line-height: 1.5; color: var(--ink-3); letter-spacing: 0.02em; max-width: 30ch; }
+@media (max-width: 480px) { .ref-book { gap: 16px; } .ref-book img { width: 104px; } }
+
+/* =====================================================================
+   RESPIRO — citação full-bleed
+   ===================================================================== */
+.respiro {
+  position: relative; min-height: 80vh; min-height: 80svh;
+  display: grid; align-content: center; justify-items: center;
+  overflow: hidden; padding: clamp(96px, 12vw, 160px) var(--gutter);
+}
+.respiro__bg { position: absolute; inset: 0; z-index: 0; }
+/* Blur disfarça a baixa resolução da foto e reforça o contraste do texto; overlay reduzido em compensação (Ajuste 10) */
+.respiro__bg img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 60%;
+  filter: blur(7px) saturate(0.9); transform: scale(1.08);
+}
+.respiro__overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(14,17,15,0.62) 0%, rgba(14,17,15,0.30) 50%, rgba(14,17,15,0.62) 100%);
+}
+.respiro__title { position: relative; z-index: 2; text-align: center; margin-bottom: clamp(32px, 4vw, 56px); }
+/* Bloco de citação mais largo: menos quebras, leitura horizontal */
+.respiro__quote { position: relative; z-index: 2; text-align: center; max-width: min(100%, 52ch); }
+.respiro__quote p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.45rem, 2.6vw, 2.4rem);
+  line-height: 1.28;
+  color: #fff;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(14,17,15,0.45);
+}
+.respiro__quote footer { margin-top: 26px; font-size: 0.95rem; color: rgba(255,255,255,0.75); letter-spacing: 0.04em; }
+
+/* =====================================================================
+   5. PRÓXIMO PASSO
+   ===================================================================== */
+.proximo { padding: clamp(110px, 14vw, 200px) 0 clamp(60px, 8vw, 110px); text-align: center; }
+.proximo__title { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 720; letter-spacing: -0.035em; line-height: 0.95; font-variation-settings: "opsz" 96; }
+.proximo__steps { margin-top: clamp(40px, 5vw, 64px); display: grid; gap: 22px; font-size: clamp(1.15rem, 1.8vw, 1.5rem); color: var(--ink-2); }
+.proximo__steps li { position: relative; }
+/* Frase de fechamento reduzida — proporção do fechamento de quebra-ag.github.io/arcos-dorados-2026 (Ajuste 11) */
+.proximo__closing {
+  margin-top: clamp(48px, 6vw, 80px);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.3;
+  color: var(--lime);
+  max-width: 30ch;
+  margin-inline: auto;
+}
+
+/* =====================================================================
+   6. ASSINATURA + RODAPÉ
+   ===================================================================== */
+.assinatura { display: grid; place-items: center; padding: clamp(24px, 4vw, 48px) var(--gutter) clamp(72px, 9vw, 120px); }
+.assinatura__link { display: inline-flex; max-width: 100%; transition: opacity 300ms var(--ease-out); }
+.assinatura__link:hover { opacity: 0.75; }
+.assinatura__logo { height: 88px; width: auto; max-width: 100%; }
+@media (max-width: 640px) { .assinatura__logo { height: 72px; } }
+.footer { border-top: 1px solid var(--line); padding: 28px var(--gutter) 34px; text-align: center; font-size: 13px; color: var(--ink-3); }
+
+/* ---------- Reveal (uma passada, discreta) ---------- */
+[data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out); }
+[data-reveal].is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .play__glow, .play__icon, .play__bars i, .hero__hint-line { animation: none !important; }
+}
+
+</style>
+  <link rel="preload" as="image" href="assets/hero/poster.jpg">
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <div class="topbar__brand">
+    <a class="topbar__logo" href="https://www.quebra.ag/" target="_blank" rel="noopener noreferrer" aria-label="Agência Quebra — abrir quebra.ag">
+      <img src="assets/logos/quebra-branco.png" alt="Quebra — agência">
+    </a>
+    <span class="topbar__sep" aria-hidden="true"></span>
+    <span class="topbar__project">Projeto de Comunicação e Marketing</span>
+  </div>
+  <button class="topbar__toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu"><span></span><span></span></button>
+  <nav class="topbar__nav" id="mainNav" aria-label="Seções">
+    <a href="#hero">1. Introdução</a>
+    <a href="#linha-do-tempo">2. História</a>
+    <a href="#visao">3. Visão</a>
+    <a href="#produtos">4. Proposta</a>
+    <a href="#futuro">5. O futuro</a>
+    <a href="#proximo-passo">6. Próximos passos</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="hero" data-frames="99">
+  <div class="hero__stage">
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <img class="hero__poster" src="assets/hero/poster.jpg" alt="Copa de duas árvores altas contra o céu">
+    <div class="hero__vignette" aria-hidden="true"></div>
+
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <p class="hero__section">1. Introdução</p>
+    <h1 class="hero__title">
+      <span>Duas vozes,</span>
+      <span>os mesmos valores</span>
+    </h1>
+
+    <p class="hero__hint" aria-hidden="true">
+      <span class="hero__hint-line"></span>
+      role para descer
+    </p>
+
+    <ul class="hero__quotes" aria-label="Frases dos fundadores">
+      <li class="hq hq--left" data-index="0">
+        <div class="hq__in">
+          <blockquote>É essencial que o Empreendedor seja capaz de escolher seu próprio caminho e se recuse a seguir os outros por hábito</blockquote>
+          <cite>Norberto Odebrecht</cite>
+        </div>
+      </li>
+      <li class="hq hq--right" data-index="1">
+        <div class="hq__in">
+          <blockquote>Sou filho de pequenos agricultores do concelho de Celorico de Basto, onde tínhamos 15 hectares de terra</blockquote>
+          <cite>Manuel António da Mota</cite>
+        </div>
+      </li>
+      <li class="hq hq--left" data-index="2">
+        <div class="hq__in">
+          <blockquote>Os problemas só podem ser superados por meio de ações que os transformem em oportunidades para prestar um serviço melhor</blockquote>
+          <cite>Norberto Odebrecht</cite>
+        </div>
+      </li>
+      <li class="hq hq--right" data-index="3">
+        <div class="hq__in">
+          <blockquote>Uma crise é sempre moeda de duas faces. Uma, a da ruptura e ameaça; a outra, a da oportunidade</blockquote>
+          <cite>Manuel António da Mota</cite>
+        </div>
+      </li>
+      <li class="hq hq--left" data-index="4">
+        <div class="hq__in">
+          <blockquote>Não tomar uma decisão no momento certo é pior do que tomar uma decisão errada</blockquote>
+          <cite>Norberto Odebrecht</cite>
+        </div>
+      </li>
+      <li class="hq hq--right" data-index="5">
+        <div class="hq__in">
+          <blockquote>Quando se lhe perguntava para quando queria as coisas, respondia sempre: “É para ontem!”</blockquote>
+          <cite>Colaborador da Mota &amp; Companhia, Angola</cite>
+        </div>
+      </li>
+      <li class="hq hq--left" data-index="6">
+        <div class="hq__in">
+          <blockquote>Os seres humanos são o princípio e o fim de todas as ações da sociedade</blockquote>
+          <cite>Norberto Odebrecht</cite>
+        </div>
+      </li>
+      <li class="hq hq--right" data-index="7">
+        <div class="hq__in">
+          <blockquote>Comecei logo a sentir um espírito que ainda hoje sinto: o grande sentido de humanismo que havia naquela empresa. Percebi depois quem era o pai desse humanismo: o Senhor Manuel Mota</blockquote>
+          <cite>Gilberto Pereira — colaborador da Mota &amp; Companhia</cite>
+        </div>
+      </li>
+      <li class="hq hq--left" data-index="8">
+        <div class="hq__in">
+          <blockquote>A perpetuidade é um sonho. Um sonho para aqueles que encontram satisfação em ajudar a formar gerações sucessivas de líderes que podem compartilhar o mesmo sonho</blockquote>
+          <cite>Norberto Odebrecht</cite>
+        </div>
+      </li>
+      <li class="hq hq--right" data-index="9">
+        <div class="hq__in">
+          <blockquote>A obra do homem tem mais realidade que o próprio homem</blockquote>
+          <cite>Manuel António da Mota</cite>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 1b. ENCONTRO (respiro claro) ============ -->
+<section class="encontro theme-light" id="encontro">
+  <div class="container container--narrow">
+    <div class="encontro__logos">
+      <img src="assets/logos/odebrecht.png" alt="Odebrecht Engenharia & Construção">
+      <span class="encontro__amp" aria-hidden="true">&amp;</span>
+      <img src="assets/logos/mota-engil.png" alt="Mota-Engil">
+    </div>
+    <blockquote class="encontro__quote">
+      Um saiu de Amarante, o outro de Salvador. Um dizia “é a coragem de agir que caracteriza o espírito empreendedor”; o outro, que “mais do que a análise, é a ação que conduz ao sucesso”. Norberto Odebrecht e Manuel Mota nunca se sentaram à mesma mesa, mas construíram a mesma cultura: aquela em que as pessoas são o maior ativo e a obra fala por quem a fez. Odebrecht e Mota-Engil não são duas empresas que se encontram. É a mesma vocação que se reconhece.
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ 2. LINHA DO TEMPO ============ -->
+<section class="timeline" id="linha-do-tempo">
+  <div class="timeline__intro">
+    <div class="container container--narrow">
+      <h2 class="section-title">2. Uma história de colaboração</h2>
+      <p class="timeline__header">Linha do Tempo</p>
+      <p class="timeline__intro-text">Odebrecht e Mota-Engil, uma história de parceria e colaboração</p>
+    </div>
+  </div>
+  <div class="timeline__pin">
+    <div class="timeline__bgs" aria-hidden="true">
+      <div class="timeline__bg is-active" data-bg="IM01"><img src="assets/timeline/IM01.webp" alt="" loading="lazy"></div>
+      <div class="timeline__bg" data-bg="IM02"><img src="assets/timeline/IM02.webp" alt="" loading="lazy"></div>
+      <div class="timeline__bg" data-bg="IM10"><img src="assets/timeline/IM10.webp" alt="" loading="lazy"></div>
+      <div class="timeline__bg" data-bg="IM09"><img src="assets/timeline/IM09.webp" alt="" loading="lazy"></div>
+      <div class="timeline__bg" data-bg="IM03"><img src="assets/timeline/IM03.webp" alt="" loading="lazy"></div>
+      <div class="timeline__bg" data-bg="IM07"><img src="assets/timeline/IM07.webp" alt="" loading="lazy"></div>
+      <div class="timeline__bg" data-bg="IM08"><img src="assets/timeline/IM08.webp" alt="" loading="lazy"></div>
+      <div class="timeline__bg" data-bg="IM06"><img src="assets/timeline/IM06.webp" alt="" loading="lazy"></div>
+    </div>
+    <div class="timeline__shade" aria-hidden="true"></div>
+
+    <header class="timeline__head">
+      <p class="timeline__head-title">Linha do Tempo · 1994 — 2011</p>
+      <p class="timeline__counter" aria-hidden="true"><span class="timeline__counter-cur">01</span> / <span class="timeline__counter-total">12</span></p>
+    </header>
+
+    <div class="timeline__track">
+      <div class="timeline__rail" aria-hidden="true"><div class="timeline__rail-fill"></div></div>
+
+      <article class="tl-item" data-bg="IM01">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">1994</p>
+        <h3 class="tl-item__title">Dois grupos, uma aposta em conjunto</h3>
+        <p class="tl-item__text">Em busca de uma alternativa para a travessia do Tejo, a BPC (Odebrecht) uniu forças com a Mota &amp; Companhia, formando o consórcio que fecharia contrato com o Estado português em março. No mesmo ano, ao lado da Engil, a BPC testava outra frente de colaboração no Metrô de Lisboa — os primeiros sinais de uma relação que se tornaria duradoura.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM01">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">1996</p>
+        <h3 class="tl-item__title">Alianças estratégicas</h3>
+        <p class="tl-item__text">Juntas, a Mota e a BPC Engil constroem a <strong>Ponte Vasco da Gama</strong>. A proximidade entre as empresas sempre conviveu, com naturalidade, com alianças paralelas em outras frentes de mercado.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM02">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">1998</p>
+        <h3 class="tl-item__title">Um grande marco para uma cidade milenar</h3>
+        <p class="tl-item__text">Concluída em pouco mais de três anos, dentro do prazo e sem estouros de orçamento, a <strong>Ponte Vasco da Gama</strong> foi inaugurada em março como símbolo do que a união entre BPC e Mota &amp; Companhia, iniciada ainda em 1990, era capaz de entregar.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM02">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2000</p>
+        <h3 class="tl-item__title">Nasce a Mota-Engil, cresce a parceria com a Odebrecht</h3>
+        <p class="tl-item__text">Com a fusão entre Mota e Engil nasce a Mota-Engil — e a relação com a BPC ganha nova escala. Juntas, as empresas conquistam a concessão Aenor e o contrato da Costa da Prata, consolidando um vínculo societário que a própria nomenclatura da época, “BPC Engil”, já deixava transparecer.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM10">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2001</p>
+        <h3 class="tl-item__title">Uma nova concessão, mais uma vitória em conjunto</h3>
+        <p class="tl-item__text">O consórcio Lusoscut — reunindo BPC, Mota e Engil — venceu a concorrência da concessão <strong>Beiras Litoral e Alta (IP5)</strong>, assinando um <strong>contrato de 30 anos e US$ 1 bilhão em investimentos</strong>. Era a terceira grande concessão rodoviária conquistada em parceria entre as empresas.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM09">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2004</p>
+        <h3 class="tl-item__title">Odebrecht avança em Portugal</h3>
+        <p class="tl-item__text">Com o foco voltado à disputa pelo <strong>Trem de Alta Velocidade</strong>, a BPC ampliou sua carteira de obras em Portugal ao lado do Banco Espírito Santo, da Somague e da Spie. Neste projeto, a Mota-Engil não participou do consórcio.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM03">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2005</p>
+        <h3 class="tl-item__title">Parceria madura</h3>
+        <p class="tl-item__text">Passada mais de uma década de convivência, os números confirmam o tamanho da parceria: a Mota-Engil já controlava 32,42% das concessões rodoviárias conjuntas, contra 13,87% da BPC. A relação também ganhou uma nova frente, com as duas empresas lado a lado na construção da <strong>Linha Vermelha do Metrô de Lisboa</strong>.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM07">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2007</p>
+        <h3 class="tl-item__title">Novas frentes em Portugal, caminhos próprios fora dele</h3>
+        <p class="tl-item__text">Em Portugal, a parceria ganhou mais uma camada: BPC e Mota passaram a investir juntas na <strong>plataforma logística do Poceirão</strong>, parte da estratégia da Odebrecht de usar a subsidiária portuguesa como trampolim para a Europa e o Norte da África. Em Angola, porém, as duas empresas já apareciam operando de forma independente, cada uma concentrada em uma frente de ação.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM08">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2008</p>
+        <h3 class="tl-item__title">Vizinhas de obra em Angola</h3>
+        <p class="tl-item__text">Em <strong>Benguela</strong> e na <strong>Via Expressa Luanda-Viana</strong>, Odebrecht e Mota-Engil trabalharam lado a lado nos mesmos programas públicos angolanos — mas sempre em lotes e trechos separados, sem formar consórcio entre si. Era a convivência entre concorrentes, diferente da parceria estabelecida em Portugal.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM06">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2009</p>
+        <h3 class="tl-item__title">Entrega em Portugal, comparação em Angola</h3>
+        <p class="tl-item__text">Em Lisboa, a <strong>extensão da Linha Vermelha do Metrô</strong> foi inaugurada como mais uma entrega bem-sucedida da parceria BPC e Mota-Engil. Em Angola, porém, o tom já era outro: a Mota-Engil passou a citar a <strong>Odebrecht como referência de porte e competitividade</strong>, sinal de que, fora de Portugal, a relação se aproximava mais da concorrência saudável do que da sociedade.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM06">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2010</p>
+        <h3 class="tl-item__title">Fim de um capítulo, início de outro</h3>
+        <p class="tl-item__text">A Odebrecht vendeu à Ascendi — controlada pela própria Mota-Engil e pelo BES — as participações que ainda mantinha em quatro concessões rodoviárias portuguesas, por €126 milhões. Foi uma transição natural, não uma ruptura. Em Angola, as duas empresas seguiam recebendo, cada uma à sua maneira, os pagamentos de dívidas do Estado, enquanto a Mota-Engil buscava a sua própria expansão imobiliária com a Sonangol.</p>
+      </article>
+
+      <article class="tl-item" data-bg="IM07">
+        <span class="tl-item__node" aria-hidden="true"></span>
+        <p class="tl-item__year">2011</p>
+        <h3 class="tl-item__title">Parcerias estratégicas</h3>
+        <p class="tl-item__text">Mesmo com o fim da sociedade nas rodovias portuguesas, Odebrecht e Mota-Engil seguiram investindo juntas na <strong>plataforma logística do Poceirão</strong>.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="timeline__sources">
+    <div class="container container--narrow">
+      <p class="timeline__sources-text">Fonte: acervo de 21 documentos analisados (revista Odebrecht Informa, boletins internos Odebrecht Notícias e Odebrecht E&amp;C Notícias, e clippings de imprensa portuguesa e angolana — Semanário Econômico, Expresso, Gazeta Mercantil, Diário Econômico, Jornal de Angola, Angolapress, O País, A Capital, Expansão, Jornal de Negócios e Netmarinha).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. NOSSA VISÃO ============ -->
+<section class="visao" id="visao">
+  <div class="container container--narrow">
+    <h2 class="section-title">3. Nossa Visão</h2>
+
+    <div class="prose prose--lead">
+      <p>Há 18 anos a Agência Quebra trabalha ao lado do Grupo Odebrecht — nos dias de celebração e nos dias em que era preciso escolher, com cuidado, cada palavra. É com esse lastro que a Quebra propõe uma Campanha de Comunicação e Marketing para anunciar uma nova fase: <strong class="hl">a chegada da Mota-Engil como sócia da Odebrecht Engenharia &amp; Construção.</strong></p>
+      <p>Uma empresa que atravessou um dos períodos mais difíceis da história empresarial recente e que, pela força de sua engenharia e de sua gente, volta a ocupar o lugar que sempre foi seu: o de uma das maiores empresas de engenharia e construção da América Latina. A trajetória não se apaga — ela se honra com o trabalho de quem segue entregando.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sociedade">
+      <div class="sociedade__text">
+        <p class="sociedade__intro">A nova sociedade</p>
+        <p class="sociedade__big">é um encontro de duas culturas fundadas por engenheiros-empreendedores</p>
+        <p class="sociedade__rest">que acreditavam nas mesmas coisas: na coragem de agir, nos desafios como matéria-prima da oportunidade, no indivíduo como medida de tudo, na obra que fica maior do que o homem. Norberto Odebrecht e Manuel António da Mota nunca se sentaram à mesma mesa. Suas ideias, agora, sentam.</p>
+      </div>
+      <div class="sociedade__visual" aria-hidden="true">
+        <div class="venn">
+          <div class="venn__circle venn__circle--odb"><span>Odebrecht<br>Engenharia &amp; Construção</span></div>
+          <div class="venn__circle venn__circle--mota"><span>Mota-Engil</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container--narrow">
+    <p class="resultado"><strong>O resultado é uma Odebrecht Engenharia &amp; Construção ainda mais forte para reafirmar sua vocação de protagonista e voar alto.</strong></p>
+
+    <div class="prose">
+      <p>Com essa visão, propomos uma campanha sob o mood <strong class="hl">“Sentir, antes de falar”</strong>. A ordem importa. Antes do argumento, a emoção; antes do release, o orgulho. Orgulho de uma engenharia brasileira que existe para servir às pessoas: obras que transformam o dia a dia, promovem desenvolvimento e qualidade de vida, e atravessam gerações.</p>
+      <p>Com esse fundamento, a Quebra apresenta a <strong class="hl">campanha em três frentes complementares</strong> — cada uma com seu propósito, seu público e seu escopo técnico de desenvolvimento.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <ol class="frentes">
+      <li class="frente"><a href="#filme">
+        <span class="frente__num">1</span>
+        <span class="frente__kind">Filme publicitário</span>
+        <span class="frente__name">Estrada de fazer o sonho acontecer</span>
+      </a></li>
+      <li class="frente"><a href="#ativacao">
+        <span class="frente__num">2</span>
+        <span class="frente__kind">Ativação</span>
+        <span class="frente__name">O mundo sempre a rodar</span>
+      </a></li>
+      <li class="frente"><a href="#livro">
+        <span class="frente__num">3</span>
+        <span class="frente__kind">Livro</span>
+        <span class="frente__name">Norberto Odebrecht</span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 4. PRODUTOS ============ -->
+<div class="produtos" id="produtos">
+<div class="produtos__head container">
+  <h2 class="section-title">4. Nossa Proposta</h2>
+</div>
+
+<!-- ---------- 4.1 FILME ---------- -->
+<section class="produto" id="filme">
+  <header class="produto__head container">
+    <p class="produto__kind"><span class="produto__num">1</span> Filme publicitário</p>
+    <h2 class="produto__title">Estrada de fazer<br>o sonho acontecer</h2>
+  </header>
+
+  <!-- Timeline vertical alternada -->
+  <div class="container container--narrow">
+    <ol class="vtl">
+      <li class="vtl__item">
+        <div class="vtl__card">
+          <h3 class="vtl__title">Reposicionamento diante do mercado</h3>
+          <p class="vtl__keys">Excelência · Protagonismo · Novo sócio · Reputação mundial · Valores compartilhados</p>
+          <p class="vtl__body">Uma narrativa que reposiciona a Odebrecht Engenharia &amp; Construção diante do mercado, reafirmando sua vocação de excelência e protagonismo a partir da chegada do novo sócio — não um investidor qualquer, mas uma empresa de reputação mundial, com longo histórico de colaborações, entregas de sucesso e valores culturais que se espelham nos da própria Odebrecht.</p>
+        </div>
+      </li>
+      <li class="vtl__item">
+        <div class="vtl__card">
+          <h3 class="vtl__title">A canção que sustenta o conceito</h3>
+          <p class="vtl__keys">Lô e Márcio Borges · Milton Nascimento · Patrimônio cultural · Memória afetiva</p>
+          <p class="vtl__body">Para dar corpo ao “Sentir, antes de falar”, a narrativa se apoia na canção <strong>“Quem Sabe Isso Quer Dizer Amor”</strong>, composição de Lô Borges e Márcio Borges, eternizada na voz de Milton Nascimento. Um patrimônio cultural brasileiro, a canção aciona a memória afetiva de gerações — e sua letra, quase como se tivesse sido escrita para isso, conduz a história de uma empresa de engenharia que faz “o mundo girar” e constrói a “estrada de fazer o sonho acontecer”.</p>
+          <p class="vtl__source"><strong>Fontes:</strong> Binet &amp; Field, <a href="https://ipa.co.uk/knowledge/publications-reports/the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies" target="_blank" rel="noopener"><em>The Long and the Short of It</em></a> (IPA Databank, análise de mais de mil campanhas); Nielsen, <a href="https://www.nielsen.com/insights/2015/i-second-that-emotion-the-emotive-power-of-music-in-advertising/" target="_blank" rel="noopener"><em>I Second That Emotion: The Emotive Power of Music in Advertising</em></a> (2015); Damásio, <em>O Erro de Descartes</em> (1994).</p>
+        </div>
+      </li>
+      <li class="vtl__item">
+        <div class="vtl__card">
+          <p class="vtl__label">Por que a música certa vale tanto.</p>
+          <p class="vtl__body">A publicidade sabe disso há décadas e a ciência confirmou: a decisão nasce na emoção e só depois se justifica na razão — é a tese de António Damásio em <em>O Erro de Descartes</em>, hoje base da economia comportamental. Na análise de mais de mil campanhas do banco de dados do IPA, Les Binet e Peter Field demonstraram que campanhas de apelo emocional produzem efeitos de negócio maiores e mais duradouros do que campanhas apenas institucionais — sobretudo na construção de marca no longo prazo. E <strong>a música é o atalho mais eficiente para essa emoção</strong>: pesquisas da Nielsen mostram que anúncios com trilha bem escolhida superam os demais em criatividade, empatia, poder emotivo e retenção de informação. Washington Olivetto costumava dizer que a boa propaganda entra pelo coração antes de chegar ao cérebro. É exatamente isso que “Sentir, antes de falar” propõe.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Botão trilha + letra -->
+  <div class="container container--narrow trilha">
+    <button class="play" id="playTrilha" type="button" aria-pressed="false">
+      <span class="play__glow" aria-hidden="true"></span>
+      <span class="play__icon" aria-hidden="true">
+        <svg class="play__tri" viewBox="0 0 24 24" width="22" height="22"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg>
+        <span class="play__bars"><i></i><i></i><i></i><i></i></span>
+      </span>
+      <span class="play__label">Ouça a trilha sonora</span>
+      <span class="play__time" aria-hidden="true">0:00</span>
+    </button>
+    <audio id="trilha" preload="none" src="assets/audio/trilha-milton.mp3"></audio>
+
+    <div class="lyrics">
+      <p class="lyrics__title">Quem sabe isso quer dizer amor <span>— Lô Borges e Márcio Borges</span></p>
+      <p>Cheguei a tempo de te ver acordar<br>Eu vim correndo, à frente do Sol<br>Abri a porta e, antes de entrar<br>Revi a vida inteira</p>
+      <p>Pensei em tudo que é possível falar<br>Que sirva apenas para nós dois<br>Sinais de bem, desejos de cais<br>Pequenos fragmentos de luz</p>
+      <p>Falar da cor dos temporais<br>Do céu azul, das flores de abril<br>Pensar além do bem e do mal<br>Lembrar de coisas que ninguém viu</p>
+      <p>O mundo lá, sempre a rodar<br>E em cima dele tudo vale</p>
+      <p class="lyrics__voice"><strong>[Locução]</strong> “Do Brasil para o mundo, ajudamos a construir as estradas que fazem o sonho acontecer.<br>Com a chegada da Mota-Engil, a Odebrecht Engenharia &amp; Construção abre um novo ciclo. Sonhando ainda mais alto, com o mundo sempre a rodar.”</p>
+      <p>Quem sabe isso quer dizer amor<br>Estrada de fazer o sonho acontecer</p>
+      <p class="lyrics__sign"><strong>Assinatura:</strong> Odebrecht Engenharia &amp; Construção</p>
+    </div>
+  </div>
+
+  <!-- Mosaico -->
+  <div class="container container--narrow">
+    <ul class="mosaico" aria-label="Referências visuais do filme">
+      <li><img src="assets/mosaico/m01.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m02.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m03.webp" alt="" loading="lazy"></li>
+      <li><img src="assets/mosaico/m04.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m05.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m06.webp" alt="" loading="lazy"></li>
+      <li><img src="assets/mosaico/m07.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m08.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m09.webp" alt="" loading="lazy"></li>
+      <li><img src="assets/mosaico/m10.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m11.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m12.webp" alt="" loading="lazy"></li>
+      <li><img src="assets/mosaico/m13.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m14.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m15.webp" alt="" loading="lazy"></li>
+      <li><img src="assets/mosaico/m16.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m17.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m18.webp" alt="" loading="lazy"></li>
+      <li><img src="assets/mosaico/m19.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m20.webp" alt="" loading="lazy"></li><li><img src="assets/mosaico/m21.webp" alt="" loading="lazy"></li>
+    </ul>
+  </div>
+
+  <!-- Grid de 3 cards -->
+  <div class="container">
+    <p class="grid3__intro">Três elementos compõem o filme: o olhar de quem vive as obras, a metodologia que dá forma a esse olhar e os planos que ampliam a escala.</p>
+    <div class="grid3">
+      <article class="card">
+        <h3>Ponto de vista</h3>
+        <p>O filme será composto por imagens hiper-realistas sob o ponto de vista de quem vive as grandes obras de infraestrutura da empresa no dia a dia — o motorista, o passageiro, o torcedor, o morador.</p>
+      </article>
+      <article class="card">
+        <h3>Metodologia</h3>
+        <p>As cenas serão produzidas pela metodologia <strong>Frameless</strong> da Quebra, que combina as mais recentes tecnologias de inteligência artificial para criar imagens de alto impacto e rigor realista, com orçamentos exponencialmente menores que os de uma produção convencional, sem abertura de câmera, atores, figurantes e logística equivalente.</p>
+      </article>
+      <article class="card">
+        <h3>Plano ideal</h3>
+        <p>Projetamos também captações aéreas e planos gerais de obras em três continentes, completando e enriquecendo o conjunto do filme.</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- Lista de status -->
+  <div class="container container--narrow">
+    <div class="status">
+      <p class="status__label">Variáveis de produção</p>
+      <ul class="status__list">
+        <li class="is-on"><span class="status__box" aria-hidden="true"></span>Direitos autorais da música “Quem Sabe Isso Quer Dizer Amor” (Lô Borges e Márcio Borges)</li>
+        <li class="is-on"><span class="status__box" aria-hidden="true"></span>Direitos fonomecânicos da gravação original de Milton Nascimento</li>
+        <li><span class="status__box" aria-hidden="true"></span>Criação e gravação de música alternativa</li>
+        <li><span class="status__box" aria-hidden="true"></span>Captação aérea no Brasil — São Paulo, Rio de Janeiro e Salvador</li>
+        <li><span class="status__box" aria-hidden="true"></span>Captação aérea em Portugal — Ponte Vasco da Gama, Estação Oriente (Metro), Praça do Comércio com as duas pontes</li>
+        <li><span class="status__box" aria-hidden="true"></span>Captação em Angola — Refinaria de Cabinda e Terminal Oceânico da Barra do Dande</li>
+        <li><span class="status__box" aria-hidden="true"></span>Locuções originais e versões em 3 idiomas</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Accordion Entregas -->
+  <div class="container">
+    <div class="entregas">
+      <h3 class="entregas__title">Entregas</h3>
+      <div class="acc">
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Filme comercial</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>A partir das variáveis escolhidas pelo cliente.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Peças gráficas</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>Para mídias on e offline.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Coordenação de mídia</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>O plano de mídia será desenhado conforme as necessidades e a disponibilidade de orçamento do cliente, podendo envolver a combinação progressiva de redes digitais, mídia programática e TV.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Assessoria</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>Para condução do storytelling pelas equipes internas da empresa e demais fornecedores, com especial atenção à assessoria de imprensa.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- 4.2 ATIVAÇÃO ---------- -->
+<section class="produto" id="ativacao">
+  <header class="produto__head container">
+    <p class="produto__kind"><span class="produto__num">2</span> Ativação</p>
+    <h2 class="produto__title">O mundo sempre a rodar</h2>
+    <p class="produto__sub">Uma experiência imersiva que transforma engenharia em vivência sensorial.</p>
+  </header>
+
+  <div class="container container--narrow prose">
+    <p>A ativação mergulha o público no universo dos grandes projetos de engenharia e construção assinados pela marca ao redor do mundo. É um cubo com 4 painéis de LED nas laterais do lado externo + 6 painéis de LED no lado interno.</p>
+  </div>
+
+  <!-- Bloco de mídia com cards laterais -->
+  <div class="container">
+    <div class="media-block">
+      <div class="media-block__media">
+        <figure class="media-block__img"><img src="assets/ativacao/04.webp" alt="Exterior do Cubo: painéis de LED com imagens em movimento" loading="lazy"></figure>
+        <figure class="media-block__img"><img src="assets/ativacao/05.webp" alt="Interior do Cubo: ambiente imersivo com projeção de floresta" loading="lazy"></figure>
+      </div>
+      <aside class="media-block__card media-block__card--left">
+        <h3>Do lado de fora</h3>
+        <p>Quem passa vê silhuetas e imagens em movimento, a marca e os conceitos da campanha — “o mundo sempre a rodar” e “estrada de fazer o sonho acontecer”. Um convite visual que desperta curiosidade e atrai o público para viver a experiência por dentro.</p>
+      </aside>
+      <aside class="media-block__card media-block__card--right">
+        <h3>Do lado de dentro</h3>
+        <p>Todas as telas se unem em um único ambiente imersivo. As obras entregues pela Odebrecht surgem na perspectiva de quem está dentro delas — como se o visitante estivesse literalmente sob uma ponte estaiada, atravessando um túnel ou no interior de uma arena.</p>
+      </aside>
+    </div>
+  </div>
+
+  <div class="container container--narrow prose">
+    <p>A lógica por trás da ativação é simples e ambiciosa: levar qualquer pessoa, em qualquer lugar, para dentro de uma grande obra de engenharia já realizada pela Odebrecht em algum ponto do mundo. Inicialmente pensado para o Complexo Parque Cidade Jardim, o Cubo tem potencial para seguir em uma futura road trip por outros estados do Brasil, replicando a imersão para novos públicos e territórios.</p>
+  </div>
+
+  <div class="container container--narrow">
+    <div class="imagine">
+      <p class="imagine__label">Exemplos (referências conceituais)</p>
+      <p>Imagine-se atravessando a Ponte Vasco da Gama, em Lisboa.</p>
+      <p>Imagine-se na primeira fila de um jogo do Miami Heat.</p>
+      <p>Imagine-se assistindo ao gol que garantiu a medalha de ouro ao Brasil, no Maracanã lotado.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="refs">
+      <figure class="refs__item"><img src="assets/ativacao/03.webp" alt="Cubo de LED instalado no interior de uma catedral" loading="lazy"></figure>
+      <figure class="refs__item"><img src="assets/ativacao/01.webp" alt="Pessoa em sala imersiva com projeção de copa de árvores" loading="lazy"></figure>
+      <figcaption class="refs__caption">Referências de imersão</figcaption>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="entregas">
+      <h3 class="entregas__title">Entregas</h3>
+      <div class="acc">
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Projeto 3D</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>Para a ativação sensorial imersiva.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Vídeos hiper-realistas</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>Em 6 dimensões, com som espacial.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Vídeos externos</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>Circulando os temas da campanha e da marca.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Instalação e coordenação técnica</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>Diárias de 6 a 8 horas.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container--narrow">
+    <div class="status">
+      <p class="status__label">Variáveis</p>
+      <ul class="status__list">
+        <li><span class="status__box" aria-hidden="true"></span>Número de experiências para exibição interna</li>
+        <li><span class="status__box" aria-hidden="true"></span>Diárias</li>
+        <li><span class="status__box" aria-hidden="true"></span>Locais de instalação</li>
+        <li><span class="status__box" aria-hidden="true"></span>Brindes personalizados</li>
+      </ul>
+    </div>
+
+    <aside class="note">
+      <p><strong>Escopo incluso:</strong> A ativação contempla o mesmo pacote completo de serviços: equipamentos audiovisuais, cenografia, estrutura adicional para o espaço, staff completo (técnico audiovisual, recepção, segurança e limpeza), ambientação, produção de conteúdo, rádios de comunicação.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ---------- 4.3 LIVRO ---------- -->
+<section class="produto" id="livro">
+  <header class="produto__head container">
+    <p class="produto__kind"><span class="produto__num">3</span> Livro</p>
+    <h2 class="produto__title">Norberto Odebrecht</h2>
+    <p class="produto__sub">Livro comemorativo sobre a jornada empresarial de Norberto Odebrecht, em edição de luxo, com linguagem contemporânea e ricamente ilustrado.</p>
+  </header>
+
+  <div class="container">
+    <div class="norberto">
+      <figure class="norberto__main">
+        <img src="assets/livro/norberto-obra.webp" alt="Norberto Odebrecht jovem, analisando um projeto em meio à obra com engenheiros" loading="lazy">
+        <figcaption>Norberto Odebrecht em obra, ao lado da equipe de engenharia. <span class="norberto__credit">Crédito a confirmar</span></figcaption>
+      </figure>
+      <figure class="norberto__side">
+        <img src="assets/livro/norberto-mesa.webp" alt="Norberto Odebrecht em seu escritório" loading="lazy">
+      </figure>
+      <figure class="norberto__side">
+        <img src="assets/livro/norberto-retrato.webp" alt="Retrato de Norberto Odebrecht" loading="lazy">
+      </figure>
+    </div>
+  </div>
+
+  <div class="container container--narrow">
+    <figure class="livro__capa">
+      <!-- PENDENTE: substituir pela capa do livro do Instituto Ayrton Senna -->
+      <div class="capa-mock" role="img" aria-label="Capa provisória do livro Norberto Odebrecht">
+        <span class="capa-mock__kicker">Edição comemorativa</span>
+        <span class="capa-mock__title">Norberto<br>Odebrecht</span>
+        <span class="capa-mock__foot">30 × 30 cm · 120–140 páginas</span>
+      </div>
+    </figure>
+  </div>
+
+  <!-- Diagrama radial com legendas laterais -->
+  <div class="container">
+    <div class="radial">
+      <div class="radial__left">
+        <div class="radial__block">
+          <p class="radial__num">01</p>
+          <span class="radial__tag">Relacionamento</span>
+          <p class="radial__desc">Distribuição a clientes e formadores de opinião.</p>
+        </div>
+        <div class="radial__block">
+          <p class="radial__num">02</p>
+          <span class="radial__tag">Receita</span>
+          <p class="radial__desc">Comercialização.</p>
+        </div>
+        <div class="radial__block">
+          <p class="radial__num">03</p>
+          <span class="radial__tag">Ativo digital</span>
+          <p class="radial__desc">Geração de trechos proprietários para indexação.</p>
+        </div>
+      </div>
+      <svg class="radial__lines" aria-hidden="true"></svg>
+      <div class="radial__center" aria-hidden="true">
+        <span class="radial__ring"></span>
+        <span class="radial__halo"></span>
+        <div class="radial__circle">
+          <!-- PENDENTE: capa real mascarada em círculo -->
+          <img src="assets/livro/norberto-retrato.webp" alt="" loading="lazy">
+        </div>
+      </div>
+      <div class="radial__right">
+        <div class="pill"><span>SEO<small>para ser encontrado</small></span><i aria-hidden="true"></i></div>
+        <div class="pill"><span>GEO<small>para ser a fonte citada</small></span><i aria-hidden="true"></i></div>
+        <div class="pill"><span>AEO<small>para ser a resposta</small></span><i aria-hidden="true"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container--narrow">
+    <aside class="note">
+      <p><strong>Por que este livro:</strong> Mesmo com as edições impressas da TEO e a obra <em>Ser Empresário — O Pensamento de Norberto Odebrecht</em>, de Antonio Carlos Gomes da Costa, a história de Norberto Odebrecht ainda pede uma obra que devolva à sociedade a jornada completa do realizador. Uma obra que apresenta o homem em todas as suas dimensões — empresário, visionário, pensador, filantropo, transformador — e que confia na inteligência de quem lê para tirar suas próprias conclusões.</p>
+    </aside>
+  </div>
+
+  <!-- Grid de boxes de tópicos -->
+  <div class="container">
+    <div class="topics">
+      <h3 class="topics__title">Com texto em tom jornalístico, resgates históricos e grandes imagens, a narrativa passará:</h3>
+      <div class="topics__grid">
+        <div class="topic">Pela fundação da primeira empresa.</div>
+        <div class="topic">Pela criação de métodos inovadores de construção — com momentos curiosos, como os jantares de formação dos mestres de obra — que chamaram a atenção de grandes clientes.</div>
+        <div class="topic">Pelas obras filantrópicas que marcaram toda a jornada e permanecem até hoje, com a Fundação Norberto Odebrecht.</div>
+        <div class="topic">Pela consolidação nacional e internacional da empresa.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container--narrow prose">
+    <p>Uma jornada do herói sob o ponto de vista empresarial e cultural, destacando a reputação internacional — certificada por prêmios e citações nas grandes publicações especializadas do setor — e a excelência de suas entregas.</p>
+  </div>
+
+  <!-- Hub and spoke -->
+  <div class="container container--narrow">
+    <div class="hub">
+      <p class="hub__label">Extração de dados</p>
+      <div class="hub__stage">
+        <svg class="hub__mesh" viewBox="0 0 600 600" aria-hidden="true">
+          <circle cx="300" cy="300" r="262" />
+          <polygon points="300,100 490.2,238.2 417.6,461.8 182.4,461.8 109.8,238.2" />
+        </svg>
+        <div class="hub__core"><span>Fontes</span></div>
+        <p class="hub__sat hub__sat--1"><strong>Núcleo de Cultura</strong><span>acervo completo dos 70 anos, com clipagem e documentos</span></p>
+        <p class="hub__sat hub__sat--2"><strong>TEO</strong><span>obra sobre cultura empresarial, escrita pelo próprio personagem</span></p>
+        <p class="hub__sat hub__sat--3"><strong>Entrevista fundadora</strong><span>gravação bruta de 60 minutos com o primeiro funcionário</span></p>
+        <p class="hub__sat hub__sat--4"><strong>Entrevistas de convivência</strong><span>5 a 8 personagens que conviveram com ele e/ou seguem na empresa</span></p>
+        <p class="hub__sat hub__sat--5"><strong>Pesquisa web</strong><span>levantamento complementar de materiais públicos</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="entregas">
+      <h3 class="entregas__title">Entregas</h3>
+      <div class="acc">
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Redação, projeto gráfico e diagramação do livro</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>Volume de 120 a 140 páginas, formato 30 × 30 cm, couchê 150 a 180 g com verniz localizado.</p></div></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__btn" type="button" aria-expanded="false"><span>Infraestrutura de indexação</span><span class="acc__icon" aria-hidden="true"></span></button>
+          <div class="acc__panel"><div class="acc__inner"><p>Trechos selecionados preparados para SEO, GEO e AEO.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gantt -->
+  <div class="container container--narrow">
+    <div class="gantt">
+      <h3 class="gantt__title">Cronograma <span>24 meses</span></h3>
+      <div class="gantt__row">
+        <div class="gantt__bar gantt__bar--1"><span>12 meses</span></div>
+        <p class="gantt__sub">Produção do livro — redação, projeto gráfico e diagramação</p>
+      </div>
+      <div class="gantt__row gantt__row--2">
+        <div class="gantt__bar gantt__bar--2"><span>12 meses</span></div>
+        <p class="gantt__sub">Infraestrutura de indexação — trabalho contínuo a partir do lançamento (mínimo recomendado)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container--narrow">
+    <figure class="ref-book">
+      <img src="assets/livro/livro-senna.webp" alt="Livro comemorativo Instituto Ayrton Senna 30 anos" loading="lazy">
+      <figcaption>Instituto Ayrton Senna 30 anos — referência de edição de luxo, com informações indexadas</figcaption>
+    </figure>
+  </div>
+</section>
+
+</div><!-- /produtos -->
+
+<!-- ============ RESPIRO — citação full-bleed ============ -->
+<section class="respiro" id="futuro">
+  <div class="respiro__bg"><img src="assets/img/respiro-rodovia.webp" alt="" loading="lazy"></div>
+  <div class="respiro__overlay" aria-hidden="true"></div>
+  <h2 class="respiro__title section-title">5. O futuro</h2>
+  <blockquote class="respiro__quote">
+    <p>“A imagem que importa e faz a diferença é construída na Comunidade a partir da satisfação de cada Cliente individual e do nosso compromisso com o bem-estar da Comunidade.”</p>
+    <footer>Norberto Odebrecht</footer>
+  </blockquote>
+</section>
+
+<!-- ============ 5. PRÓXIMO PASSO ============ -->
+<section class="proximo" id="proximo-passo">
+  <div class="container container--narrow">
+    <h2 class="proximo__title">6. Próximos Passos</h2>
+    <ol class="proximo__steps">
+      <li>Avaliação dos produtos e suas variáveis</li>
+      <li>Definição de escopo</li>
+      <li>Cronograma</li>
+    </ol>
+    <p class="proximo__closing">Vamos juntos em mais essa?</p>
+  </div>
+</section>
+
+<!-- ============ 6. ASSINATURA ============ -->
+<section class="assinatura">
+  <a class="assinatura__link" href="https://www.quebra.ag/" target="_blank" rel="noopener noreferrer" aria-label="Agência Quebra — abrir quebra.ag">
+    <img src="assets/logos/quebra-tagline-horizontal.png" alt="Quebra — agência. Inteligência e alma." class="assinatura__logo">
+  </a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>Uma proposta desenhada sob medida para a Odebrecht Engenharia &amp; Construção</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+/* =====================================================================
+   Duas vozes, os mesmos valores — main.js
+   GSAP + ScrollTrigger (único motor de animação da página)
+   ===================================================================== */
+(function () {
+  "use strict";
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hasGSAP = typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined";
+  if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
+
+  /* -------------------------------------------------------------------
+     1. HERO — sequência de frames controlada pelo scroll
+     ------------------------------------------------------------------- */
+  function initHero() {
+    const hero = document.getElementById("hero");
+    if (!hero || reduceMotion || !hasGSAP) return;
+
+    const stage = hero.querySelector(".hero__stage");
+    const canvas = hero.querySelector(".hero__canvas");
+    const ctx = canvas.getContext("2d", { alpha: false });
+    const title = hero.querySelector(".hero__title");
+    const sectionLabel = hero.querySelector(".hero__section");
+    const hint = hero.querySelector(".hero__hint");
+    const scrim = hero.querySelector(".hero__scrim");
+    const quotes = Array.from(hero.querySelectorAll(".hq"));
+    const FRAMES = parseInt(hero.dataset.frames, 10) || 99;
+    const FRAME_W = 1280, FRAME_H = 720;
+
+    const images = new Array(FRAMES);
+    let loaded = 0;
+    let current = -1;
+    let pendingFrame = 0;
+
+    const src = (i) => `assets/hero/f_${String(i + 1).padStart(3, "0")}.webp`;
+
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(stage.clientWidth * dpr);
+      canvas.height = Math.round(stage.clientHeight * dpr);
+      current = -1;
+      draw(pendingFrame);
+    }
+
+    function draw(i) {
+      pendingFrame = i;
+      // usa o frame mais próximo já carregado (busca para trás e para frente)
+      let img = images[i];
+      if (!img || !img.complete) {
+        let found = null;
+        for (let d = 1; d < FRAMES && !found; d++) {
+          if (images[i - d] && images[i - d].complete) found = images[i - d];
+          else if (images[i + d] && images[i + d].complete) found = images[i + d];
+        }
+        img = found;
+      }
+      if (!img || i === current) return;
+      current = i;
+      const cw = canvas.width, ch = canvas.height;
+      const scale = Math.max(cw / FRAME_W, ch / FRAME_H);
+      const w = FRAME_W * scale, h = FRAME_H * scale;
+      ctx.drawImage(img, (cw - w) / 2, (ch - h) / 2, w, h);
+    }
+
+    // Carrega o primeiro frame, marca pronto, depois o resto em ordem
+    function loadFrame(i) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.decoding = "async";
+        img.onload = () => { loaded++; resolve(img); };
+        img.onerror = () => resolve(null);
+        img.src = src(i);
+        images[i] = img;
+      });
+    }
+
+    loadFrame(0).then(() => {
+      resize();
+      hero.classList.add("is-ready");
+      // carrega o restante em ordem, com 6 downloads simultâneos
+      let next = 1;
+      const CONCURRENCY = 6;
+      const pump = () => {
+        if (next >= FRAMES) return;
+        const i = next++;
+        loadFrame(i).then(() => {
+          current = -1; draw(pendingFrame);
+          pump();
+        });
+      };
+      for (let k = 0; k < CONCURRENCY; k++) pump();
+    });
+
+    window.addEventListener("resize", resize);
+
+    /* ---- Timeline de scroll ---- */
+    const N = quotes.length;
+    const Q_START = 0.17;   // depois da revoada (2s ≈ 16%)
+    const Q_END = 0.97;
+    const win = (Q_END - Q_START) / N;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: hero,
+        start: "top top",
+        end: "+=" + (FRAMES * 55) + "px", // ~5400px de rolagem
+        pin: stage,
+        pinSpacing: true,
+        scrub: 0.6,
+        anticipatePin: 1,
+        onUpdate(self) {
+          const p = self.progress;
+          draw(Math.min(FRAMES - 1, Math.round(p * (FRAMES - 1))));
+          hero.style.setProperty("--hero-shade", Math.max(0, (p - 0.6) / 0.4).toFixed(3));
+        }
+      }
+    });
+
+    // Título e hint saem logo no início
+    tl.to(title, { opacity: 0, y: -40, scale: 0.96, duration: 0.09, ease: "power2.in" }, 0.01);
+    if (sectionLabel) tl.to(sectionLabel, { opacity: 0, y: -30, duration: 0.09, ease: "power2.in" }, 0.01);
+    tl.to(scrim, { opacity: 0.3, duration: 0.14, ease: "power1.out" }, 0.01);
+    tl.to(hint, { opacity: 0, duration: 0.05 }, 0);
+
+    // Frases alternadas
+    quotes.forEach((q, i) => {
+      const s = Q_START + i * win;
+      const fade = win * 0.28;
+      const dir = q.classList.contains("hq--left") ? -1 : 1;
+      tl.fromTo(q, { opacity: 0, x: 28 * dir }, { opacity: 1, x: 0, duration: fade, ease: "power2.out" }, s);
+      tl.to(q, { opacity: 0, x: -18 * dir, duration: fade, ease: "power2.in" }, s + win - fade);
+    });
+  }
+
+  /* -------------------------------------------------------------------
+     2. LINHA DO TEMPO — horizontal, pinada, fundo por item
+     ------------------------------------------------------------------- */
+  function initTimeline() {
+    const section = document.getElementById("linha-do-tempo");
+    if (!section || reduceMotion || !hasGSAP) return;
+
+    const pin = section.querySelector(".timeline__pin");
+    const track = section.querySelector(".timeline__track");
+    const items = Array.from(section.querySelectorAll(".tl-item"));
+    const bgs = Array.from(section.querySelectorAll(".timeline__bg"));
+    const rail = section.querySelector(".timeline__rail");
+    const railFill = section.querySelector(".timeline__rail-fill");
+    const sizeRail = () => { rail.style.width = track.scrollWidth + "px"; };
+    sizeRail();
+    window.addEventListener("resize", sizeRail);
+    const counterCur = section.querySelector(".timeline__counter-cur");
+    const counterTotal = section.querySelector(".timeline__counter-total");
+    const N = items.length;
+    counterTotal.textContent = String(N).padStart(2, "0");
+
+    let active = -1;
+    function setActive(i) {
+      if (i === active) return;
+      active = i;
+      items.forEach((el, k) => el.classList.toggle("is-active", k === i));
+      const key = items[i].dataset.bg;
+      bgs.forEach((b) => b.classList.toggle("is-active", b.dataset.bg === key));
+      counterCur.textContent = String(i + 1).padStart(2, "0");
+    }
+    setActive(0);
+
+    gsap.to(track, {
+      x: () => -(track.scrollWidth - window.innerWidth),
+      ease: "none",
+      scrollTrigger: {
+        trigger: pin,
+        start: "top top",
+        end: () => "+=" + (N * Math.max(600, window.innerHeight * 0.85)),
+        pin: pin,
+        scrub: 0.8,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+        onUpdate(self) {
+          const p = self.progress;
+          setActive(Math.min(N - 1, Math.round(p * (N - 1))));
+          const gutter = items[0].getBoundingClientRect().left + parseFloat(getComputedStyle(items[0]).paddingLeft) - track.getBoundingClientRect().left;
+          railFill.style.width = (gutter + p * (track.scrollWidth - window.innerWidth) + 8) + "px";
+        }
+      }
+    });
+  }
+
+  /* -------------------------------------------------------------------
+     3. Accordion (múltiplos abertos, botão inteiro clicável)
+     ------------------------------------------------------------------- */
+  function initMenu() {
+    const btn = document.querySelector(".topbar__toggle");
+    const nav = document.getElementById("mainNav");
+    if (!btn || !nav) return;
+    btn.addEventListener("click", () => {
+      const open = nav.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", String(open));
+    });
+    nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => {
+      nav.classList.remove("is-open"); btn.setAttribute("aria-expanded", "false");
+    }));
+  }
+
+  function initAccordions() {
+    document.querySelectorAll(".acc__btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const open = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!open));
+      });
+    });
+  }
+
+  /* -------------------------------------------------------------------
+     4. Trilha sonora
+     ------------------------------------------------------------------- */
+  function initAudio() {
+    const btn = document.getElementById("playTrilha");
+    const audio = document.getElementById("trilha");
+    if (!btn || !audio) return;
+    const label = btn.querySelector(".play__label");
+    const time = btn.querySelector(".play__time");
+    const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+
+    btn.addEventListener("click", () => {
+      if (audio.paused) audio.play(); else audio.pause();
+    });
+    audio.addEventListener("play", () => {
+      btn.classList.add("is-playing"); btn.setAttribute("aria-pressed", "true");
+      label.textContent = "Tocando a trilha — pausar";
+    });
+    audio.addEventListener("pause", () => {
+      btn.classList.remove("is-playing"); btn.setAttribute("aria-pressed", "false");
+      label.textContent = audio.currentTime > 0 && audio.currentTime < audio.duration ? "Continuar a trilha" : "Ouça a trilha sonora";
+    });
+    audio.addEventListener("timeupdate", () => {
+      if (!audio.duration) return;
+      time.textContent = fmt(audio.currentTime);
+      btn.style.setProperty("--p", (audio.currentTime / audio.duration).toFixed(4));
+    });
+    audio.addEventListener("ended", () => {
+      btn.style.setProperty("--p", 0); time.textContent = "0:00";
+      label.textContent = "Ouça a trilha sonora";
+    });
+  }
+
+  /* -------------------------------------------------------------------
+     4b. Diagrama radial do livro — linhas 01/02/03 → núcleo (SVG)
+     Cada linha parte do fim do número e termina na borda do círculo
+     central, no ponto voltado para o próprio bloco.
+     ------------------------------------------------------------------- */
+  function initRadialLines() {
+    const radial = document.querySelector(".radial");
+    const svg = radial && radial.querySelector(".radial__lines");
+    const circle = radial && radial.querySelector(".radial__circle");
+    if (!radial || !svg || !circle) return;
+    const nums = Array.from(radial.querySelectorAll(".radial__left .radial__num"));
+    const NS = "http://www.w3.org/2000/svg";
+
+    function draw() {
+      svg.replaceChildren();
+      if (getComputedStyle(svg).display === "none") return;
+      const box = radial.getBoundingClientRect();
+      const W = box.width, H = box.height;
+      svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+      svg.setAttribute("width", W);
+      svg.setAttribute("height", H);
+
+      const c = circle.getBoundingClientRect();
+      const cx = c.left - box.left + c.width / 2;
+      const cy = c.top - box.top + c.height / 2;
+      const r = c.width / 2;
+
+      nums.forEach((num) => {
+        const n = num.getBoundingClientRect();
+        const x0 = n.right - box.left + 16;           // logo após o número
+        const y0 = n.top - box.top + n.height / 2;    // centro vertical do número
+        // ponto da borda do círculo voltado para o bloco
+        const dx = x0 - cx, dy = y0 - cy;
+        const len = Math.hypot(dx, dy) || 1;
+        const x1 = cx + (dx / len) * (r + 6);
+        const y1 = cy + (dy / len) * (r + 6);
+        // trecho horizontal curto e depois curva suave até o círculo
+        const xm = x0 + Math.max(24, (x1 - x0) * 0.35);
+        const path = document.createElementNS(NS, "path");
+        path.setAttribute("d", `M ${x0} ${y0} H ${xm} C ${xm + (x1 - xm) * 0.55} ${y0}, ${xm + (x1 - xm) * 0.45} ${y1}, ${x1} ${y1}`);
+        svg.appendChild(path);
+        const dotStart = document.createElementNS(NS, "circle");
+        dotStart.setAttribute("cx", x0); dotStart.setAttribute("cy", y0); dotStart.setAttribute("r", 2.5);
+        svg.appendChild(dotStart);
+        const dot = document.createElementNS(NS, "circle");
+        dot.setAttribute("cx", x1); dot.setAttribute("cy", y1); dot.setAttribute("r", 4);
+        svg.appendChild(dot);
+        const glow = document.createElementNS(NS, "circle");
+        glow.setAttribute("cx", x1); glow.setAttribute("cy", y1); glow.setAttribute("r", 9);
+        glow.setAttribute("class", "is-glow");
+        svg.appendChild(glow);
+      });
+    }
+
+    draw();
+    window.addEventListener("resize", draw);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+    if ("ResizeObserver" in window) new ResizeObserver(draw).observe(radial);
+  }
+
+  /* -------------------------------------------------------------------
+     5. Reveals discretos (uma passada) nos blocos de conteúdo
+     ------------------------------------------------------------------- */
+  function initReveals() {
+    const targets = document.querySelectorAll(
+      ".sociedade, .resultado, .frente, .vtl__item, .trilha, .mosaico, .grid3 .card, .status, .entregas, .media-block, .imagine, .note, .norberto, .livro__capa, .radial, .topics, .hub, .gantt, .ref-book, .proximo__title, .proximo__steps li, .proximo__closing, .assinatura__logo"
+    );
+    targets.forEach((el) => el.setAttribute("data-reveal", ""));
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      targets.forEach((el) => el.classList.add("is-in"));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    targets.forEach((el) => io.observe(el));
+  }
+
+  /* ------------------------------------------------------------------- */
+  window.addEventListener("load", () => {
+    initHero();
+    initTimeline();
+    initMenu();
+    initAccordions();
+    initAudio();
+    initRadialLines();
+    initReveals();
+    if (hasGSAP) ScrollTrigger.refresh();
+  });
+})();
+
+</script>
+</body>
+</html>
