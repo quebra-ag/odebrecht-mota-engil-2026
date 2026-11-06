@@ -721,7 +721,6 @@ em { font-style: italic; }
 }
 .resultado strong { font-weight: 660; color: var(--lime); }
 
-
 /* =====================================================================
    4. PRODUTOS
    ===================================================================== */
@@ -863,6 +862,9 @@ em { font-style: italic; }
 .mosaico li { aspect-ratio: 1; overflow: hidden; }
 /* Nova grade (Figma "Mosaico Imagens"): 3 colunas em todos os dispositivos; algumas imagens ocupam 2 colunas */
 .mosaico li.mosaico__wide { grid-column: span 2; aspect-ratio: auto; } /* acompanha a altura da linha, definida pelo quadrado vizinho */
+/* Bloco de abertura: imagem larga no topo (2 colunas) e imagem vertical ocupando 2 linhas na 3ª coluna */
+.mosaico li.mosaico__lead { aspect-ratio: 2 / 1; } /* define a altura da 1ª linha, que não tem quadrado vizinho */
+.mosaico li.mosaico__tall { grid-row: span 2; aspect-ratio: auto; }
 .mosaico img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ---- Grid de 3 cards ---- */
@@ -1157,10 +1159,8 @@ em { font-style: italic; }
       <div class="timeline__bg is-active" data-bg="IM01"><img src="assets/timeline/IM01.webp" alt="" loading="lazy"></div>
       <div class="timeline__bg" data-bg="IM02"><img src="assets/timeline/IM02.webp" alt="" loading="lazy"></div>
       <div class="timeline__bg" data-bg="IM10"><img src="assets/timeline/IM10.webp" alt="" loading="lazy"></div>
-      <div class="timeline__bg" data-bg="IM09"><img src="assets/timeline/IM09.webp" alt="" loading="lazy"></div>
       <div class="timeline__bg" data-bg="IM03"><img src="assets/timeline/IM03.webp" alt="" loading="lazy"></div>
       <div class="timeline__bg" data-bg="IM07"><img src="assets/timeline/IM07.webp" alt="" loading="lazy"></div>
-      <div class="timeline__bg" data-bg="IM08"><img src="assets/timeline/IM08.webp" alt="" loading="lazy"></div>
       <div class="timeline__bg" data-bg="IM06"><img src="assets/timeline/IM06.webp" alt="" loading="lazy"></div>
       <div class="timeline__bg" data-bg="IM11"><img src="assets/timeline/IM11.webp" alt="" loading="lazy"></div>
       <div class="timeline__bg" data-bg="IM12"><img src="assets/timeline/IM12.webp" alt="" loading="lazy"></div>
@@ -1183,19 +1183,6 @@ em { font-style: italic; }
         <p class="tl-item__text">Em busca de uma alternativa para a travessia do Tejo, a BPC (Odebrecht) uniu forças com a Mota &amp; Companhia, formando o consórcio que fecharia contrato com o Estado português em março. No mesmo ano, ao lado da Engil, a BPC testava outra frente de colaboração no Metrô de Lisboa — os primeiros sinais de uma relação que se tornaria duradoura.</p>
       </article>
 
-      <article class="tl-item" data-bg="IM01">
-        <span class="tl-item__node" aria-hidden="true"></span>
-        <p class="tl-item__year">1996</p>
-        <h3 class="tl-item__title">Alianças estratégicas</h3>
-        <p class="tl-item__text">Enquanto construíam juntas a <strong>Ponte Vasco da Gama</strong>, a Mota e a Engil mantinham, à parte, um pacto com outras construtoras portuguesas do qual a BPC não fazia parte. A proximidade entre as empresas sempre conviveu, com naturalidade, com alianças paralelas em outras frentes de mercado.</p>
-      </article>
-
-      <article class="tl-item" data-bg="IM02">
-        <span class="tl-item__node" aria-hidden="true"></span>
-        <p class="tl-item__year">1998</p>
-        <h3 class="tl-item__title">Um grande marco para uma cidade milenar</h3>
-        <p class="tl-item__text">Concluída em pouco mais de três anos, dentro do prazo e sem estouros de orçamento, a <strong>Ponte Vasco da Gama</strong> foi inaugurada em março como símbolo do que a união entre BPC e Mota &amp; Companhia, iniciada ainda em 1990, era capaz de entregar.</p>
-      </article>
 
       <article class="tl-item" data-bg="IM02">
         <span class="tl-item__node" aria-hidden="true"></span>
@@ -1209,13 +1196,6 @@ em { font-style: italic; }
         <p class="tl-item__year">2001</p>
         <h3 class="tl-item__title">Mais uma vitória juntos</h3>
         <p class="tl-item__text">O consórcio Lusoscut — reunindo BPC, Mota e Engil — venceu a concorrência da concessão <strong>Beiras Litoral e Alta (IP5)</strong>, assinando um <strong>contrato de 30 anos e US$ 1 bilhão em investimentos</strong>. Era a terceira grande concessão rodoviária conquistada em parceria entre as empresas.</p>
-      </article>
-
-      <article class="tl-item" data-bg="IM09">
-        <span class="tl-item__node" aria-hidden="true"></span>
-        <p class="tl-item__year">2004</p>
-        <h3 class="tl-item__title">Odebrecht avança em Portugal</h3>
-        <p class="tl-item__text">Com o foco voltado à disputa pelo <strong>Trem de Alta Velocidade</strong>, a BPC ampliou sua carteira de obras em Portugal ao lado do Banco Espírito Santo, da Somague e da Spie. Neste projeto, a Mota-Engil não participou do consórcio.</p>
       </article>
 
       <article class="tl-item" data-bg="IM03">
@@ -1232,18 +1212,11 @@ em { font-style: italic; }
         <p class="tl-item__text">Em Portugal, a parceria ganhou mais uma camada: BPC e Mota-Engil passaram a investir juntas na <strong>plataforma logística do Poceirão</strong>. Em Angola, porém, as duas empresas operavam de forma independente, cada uma concentrada em uma frente de ação.</p>
       </article>
 
-      <article class="tl-item" data-bg="IM08">
-        <span class="tl-item__node" aria-hidden="true"></span>
-        <p class="tl-item__year">2008</p>
-        <h3 class="tl-item__title">Vizinhas de obra em Angola</h3>
-        <p class="tl-item__text">Em <strong>Benguela</strong> e na <strong>Via Expressa Luanda-Viana</strong>, Odebrecht e Mota-Engil trabalharam lado a lado nos mesmos programas públicos angolanos — em lotes e trechos separados, sem formar consórcio entre si. Era a convivência entre concorrentes, diferente da parceria estabelecida em Portugal.</p>
-      </article>
-
       <article class="tl-item" data-bg="IM06">
         <span class="tl-item__node" aria-hidden="true"></span>
         <p class="tl-item__year">2009</p>
-        <h3 class="tl-item__title">Entrega em Portugal, concorrentes em Angola</h3>
-        <p class="tl-item__text">Em Lisboa, a <strong>extensão da Linha Vermelha do Metrô</strong> foi inaugurada como mais uma entrega bem-sucedida da parceria BPC e Mota-Engil. Em Angola, a relação era de concorrência saudável. Neste período, a Mota-Engil citava a <strong>Odebrecht como referência de porte e competitividade</strong>.</p>
+        <h3 class="tl-item__title">Mais uma entrega em Portugal</h3>
+        <p class="tl-item__text">Em Lisboa, a <strong>extensão da Linha Vermelha do Metrô</strong> foi inaugurada como mais uma entrega bem-sucedida da parceria BPC e Mota-Engil.</p>
       </article>
 
       <article class="tl-item" data-bg="IM06">
@@ -1390,16 +1363,17 @@ em { font-style: italic; }
       <p>O mundo lá, sempre a rodar<br>E em cima dele tudo vale</p>
       <p class="lyrics__voice"><strong>[Locução]</strong> “Há décadas, ajudamos a construir as estradas que fazem o sonho acontecer. Agora, Odebrecht e Mota-Engil juntas, abrem um novo ciclo.<br>Sonhando ainda mais alto, com o mundo sempre a rodar.”</p>
       <p>Quem sabe isso quer dizer amor<br>Estrada de fazer o sonho acontecer</p>
-      <p class="lyrics__sign"><strong>Assinatura:</strong> Odebrecht Engenharia &amp; Construção</p>
+      <p class="lyrics__sign"><strong>Assinatura:</strong> Odebrecht Engenharia e Construção</p>
     </div>
   </div>
 
   <!-- Mosaico -->
   <div class="container container--narrow">
     <ul class="mosaico" aria-label="Referências visuais do filme">
+      <li class="mosaico__wide mosaico__lead"><img src="assets/mosaico2/mosaico2-img-00.jpg" alt="" loading="lazy"></li>
+      <li class="mosaico__tall"><img src="assets/mosaico2/mosaico2-img-03.jpg" alt="" loading="lazy"></li>
       <li><img src="assets/mosaico2/mosaico2-img-01.jpg" alt="" loading="lazy"></li>
       <li><img src="assets/mosaico2/mosaico2-img-02.jpg" alt="" loading="lazy"></li>
-      <li><img src="assets/mosaico2/mosaico2-img-03.jpg" alt="" loading="lazy"></li>
       <li class="mosaico__wide"><img src="assets/mosaico2/mosaico2-img-04.jpg" alt="" loading="lazy"></li>
       <li><img src="assets/mosaico2/mosaico2-img-05.jpg" alt="" loading="lazy"></li>
       <li><img src="assets/mosaico2/mosaico2-img-06.jpg" alt="" loading="lazy"></li>
